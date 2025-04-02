@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT PROCESSING SYSTEM</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* 🔥 Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video adjusts properly */
+            filter: none;
+            image-rendering: auto;
+
+        }
+
+        /* 🔥 Overlay (for better text visibility) */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 0;
+        }
+
+        /* 🔥 Sidebar - Glass Effect */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: rgba(26, 26, 46, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            backdrop-filter: blur(15px);
+            border-right: 2px solid rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            position: relative;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff4d6d; /* Neon pink */
+        }
+
+        /* 🔥 Sidebar Buttons - Neon Glow */
+        .sidebar button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(10, 10, 30, 0.7);
+            color: white;
+            border: 1px solid rgba(0, 212, 255, 0.6);
+            padding: 15px;
+            margin: 10px;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .sidebar button i {
+            font-size: 18px;
+            color: #ff4d6d;
+        }
+
+        .sidebar button:hover {
+            background: rgba(0, 212, 255, 0.9);
+            color: black;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 1);
+        }
+
+        /* 🔥 Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 🔥 Header */
+        .header {
+            position: relative;
+            background: rgba(10, 10, 30, 0.8);
+            color: #00d4ff;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
+        }
+
+        /* 🔥 Home Button */
+        .home-btn {
+            background: none;
+            border: none;
+            color: #00d4ff;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .home-btn i {
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover i {
+            color: #ff4d6d;
+        }
+
+        /* 🔥 Logout Button */
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: rgba(255, 87, 51, 0.8);
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.8);
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 87, 51, 1);
+            box-shadow: 0 0 20px rgba(255, 87, 51, 1);
+        }
+
+        /* 🔥 Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .sidebar button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .header {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .home-btn i,
+            .logout-btn {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: fixed;
+                bottom: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 10px;
+            }
+
+            .sidebar button {
+                flex: 1;
+                font-size: 12px;
+                padding: 8px;
+                text-align: center;
+            }
+
+            .header {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .home-btn i {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🎥 Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='background2.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- 🔥 Overlay -->
+    <div class="overlay"></div>
+
+    <!-- 🔥 header -->
+    <div class="header">
+        <button class="home-btn" onclick="window.location.href='/'"><i class="fas fa-home"></i></button>
+        Education is not the learning of facts, but the training of the mind to think.
+        <button class="logout-btn" onclick="window.location.href='/register'"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+
+    <!-- 🔥 Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <button onclick="window.location.href='/question'"><i class="fas fa-question-circle"></i> Question Generator</button>
+        <button onclick="window.location.href='/index'"><i class="fas fa-list-ul"></i> MCQs</button>
+        <button onclick="window.location.href='/fillups'"><i class="fas fa-pen"></i> Fillups Generator</button>
+        <button onclick="window.location.href='/summarize'"><i class="fas fa-align-left"></i> Text Summarization</button>
+        <button onclick="window.location.href='/similarity'"><i class="fas fa-copy"></i> Similarity Checker</button>
+        <button onclick="window.location.href='/synonyms'"><i class="fas fa-language"></i> Synonym Suggestion</button>
+    </div>
+
+    <!-- 🔥 Main Content -->
+    <div class="main-content">
+        <!-- Your content here -->
+    </div>
+
+</body>
+</html>
+

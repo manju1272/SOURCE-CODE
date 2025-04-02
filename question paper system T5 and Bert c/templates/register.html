@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #0c0f1f;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            transition: background 0.5s ease-in-out;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%) contrast(120%);
+        }
+
+        /* Form Container */
+        .form-container {
+            background: rgba(12, 15, 31, 0.85);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+            text-align: center;
+            max-width: 400px;
+            transition: box-shadow 0.5s ease-in-out;
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            background: #101630;
+            color: #ff00ff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+        }
+
+        input::placeholder {
+            color: #ff66ff;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            margin-top: 15px;
+            background: none;
+            border: none;
+            color: #00ffff;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .toggle-btn:hover {
+            color: #ff00ff;
+        }
+
+        /* Register Mode Styling */
+        .register-mode .form-container {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        .register-mode input {
+            color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+        }
+
+        .register-mode input::placeholder {
+            color: #33ccff;
+        }
+
+        .register-mode .submit-btn {
+            background: linear-gradient(90deg, #ff007f, #00ffff);
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+        }
+
+        .register-mode .submit-btn:hover {
+            background: linear-gradient(90deg, #00ffff, #ff007f);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video id="video-bg" autoplay loop muted>
+            <source src="{{ url_for('static', filename='logv.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container">
+        <h2 id="form-title">Login</h2>
+        <form id="user-form" action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email (Gmail only)" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <button class="toggle-btn" onclick="toggleForm()">Don't have an account? Register</button>
+    </div>
+
+    <script>
+        let isRegister = false;
+
+        // Automatically switch to Register mode when the page loads
+        window.onload = function() {
+           toggleForm();
+        };
+
+        function toggleForm() {
+            const formTitle = document.getElementById("form-title");
+            const userForm = document.getElementById("user-form");
+            const videoBg = document.getElementById("video-bg");
+            const toggleBtn = document.querySelector(".toggle-btn");
+
+            isRegister = !isRegister;
+
+            if (isRegister) {
+                // Switch to Register Form
+                document.body.classList.add("register-mode");
+                formTitle.innerText = "Register";
+                userForm.setAttribute("action", "/user_register");
+                userForm.innerHTML = `
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email (Gmail only)" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                `;
+                videoBg.src = "{{ url_for('static', filename='regv.mp4') }}"; // Change video
+                videoBg.load();
+                toggleBtn.innerText = "Already have an account? Login";
+            } else {
+                // Switch to Login Form
+                document.body.classList.remove("register-mode");
+                formTitle.innerText = "Login";
+                userForm.setAttribute("action", "/login");
+                userForm.innerHTML = `
+                    <input type="email" name="email" placeholder="Email (Gmail only)" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Login</button>
+                `;
+                videoBg.src = "{{ url_for('static', filename='logv.mp4') }}"; // Change video
+                videoBg.load();
+                toggleBtn.innerText = "Don't have an account? Register";
+            }
+        }
+
+        // Form Validation
+        document.getElementById("user-form").addEventListener("submit", function(event) {
+            const nameInput = document.querySelector('input[name="name"]');
+            const emailInput = document.querySelector('input[name="email"]');
+
+            if (isRegister && nameInput && !/^[A-Za-z\s]+$/.test(nameInput.value)) {
+                alert("Name can only contain letters and spaces.");
+                event.preventDefault();
+            }
+
+            const emailPattern = /^[a-zA-Z0-9]+[a-zA-Z0-9._%+-]*@gmail\.com$/;
+            if (!emailPattern.test(emailInput.value)) {
+                alert("Please enter a valid Gmail address.");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <script>
+       // Display a window alert if the server sends an alert message
+        window.onload = function () {
+           const alertMessage = "{{ alert_message | safe }}";
+           if (alertMessage) {
+              alert(alertMessage);
+            }
+        };
+    </script>
+    
+</body>
+</html>
+
+

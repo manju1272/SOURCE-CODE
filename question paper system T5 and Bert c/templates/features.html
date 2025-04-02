@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - AI Text Processing</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.6);
+            color: #E0E0E0;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+        }
+
+        header h2 {
+            color: cyan;
+            font-weight: bold;
+        }
+
+        header a {
+            text-decoration: none;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: black;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        header a:hover {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            box-shadow: 0 5px 15px rgba(255, 0, 100, 0.4);
+        }
+
+        .content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .content h1 {
+            color: cyan;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .feature-item h2 {
+            color: #ff0080;
+            font-size: 24px;
+        }
+
+        .feature-item p {
+            font-size: 18px;
+            color: #f1f1f1;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: lightblue;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff416c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='ai2.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <a href="/">Home</a>
+        <h2>Features</h2>
+    </header>
+
+    <div class="content">
+        <h1>Explore Our Powerful Features</h1>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <h2>📝 Automated Question Paper Generation</h2>
+                <p>Create quizzes and fill-in-the-blank exercises in seconds.</p>
+            </div>
+
+            <div class="feature-item">
+                <h2>📄 Text Summarization</h2>
+                <p>Condense lengthy documents into concise, meaningful summaries.</p>
+            </div>
+
+            <div class="feature-item">
+                <h2>🔍 Text Similarity Analysis</h2>
+                <p>Compare two texts and identify similarities and differences.</p>
+            </div>
+
+            <div class="feature-item">
+                <h2>📚 Synonym Suggestions</h2>
+                <p>Enhance your vocabulary with context-aware synonym recommendations.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/faqs">FAQs</a>
+    </footer>
+
+</body>
+</html>

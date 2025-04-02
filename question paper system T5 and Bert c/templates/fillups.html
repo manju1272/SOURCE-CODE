@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILL-UPS GENERATION</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+
+    <style>
+        /* Import Futuristic Font */
+        /*@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: black;
+            color: #D9D9D9; /* Light Metallic Gray */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Video Background */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 25px;
+            background: rgba(31, 27, 46, 0.9); /* Dark Slate with Transparency */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border: 2px solid #62C5FF; /* Neon Blue Border */
+        }
+
+        
+
+        h2 {
+            color: #FFC766; /* Soft Gold */
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 
+                0 0 5px rgba(255, 215, 0, 0.8),  /* Reduced Glow */
+                0 0 10px rgba(255, 215, 0, 0.6), 
+                0 0 15px rgba(255, 165, 0, 0.4); /* Softer Orange Glow */
+        }
+
+        input[type="file"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #62C5FF;
+            background: #1F1B2E;
+            color: #D9D9D9;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+            
+        }
+
+        .button {
+            background: linear-gradient(45deg, #62C5FF, #FF6BDF); /* Neon Gradient */
+            color: #000;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(98, 197, 255, 0.8);
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #FF6BDF, #62C5FF);
+            box-shadow: 0 0 20px rgba(255, 107, 223, 1);
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #62C5FF, #FF6BDF);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(98, 197, 255, 0.8);
+        }
+
+        .back-button:hover {
+            background: linear-gradient(45deg, #FF6BDF, #62C5FF);
+            box-shadow: 0 0 20px rgba(255, 107, 223, 1);
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay loop muted id="video-bg">
+        <source src="{{ url_for('static', filename='fillv.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <a href="/dashboard" class="back-button">⬅ Back</a>
+
+
+    <div class="container">
+        <h2>Upload Text File for Fillups Generation</h2>
+        <form action="/generate_fill_in_blanks" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".txt" required>
+            <select name="action" required>
+                <option value="download">📥 Download Only</option>
+                <option value="email">📧 Email Only</option>
+                <option value="both">📥 & 📧 Both</option>
+            </select>
+            <input type="email" name="email" placeholder="Enter your email (optional)">
+            <button type="submit" class="button">Generate Fillups</button>
+        </form>
+    </div>
+</body>
+</html>
+

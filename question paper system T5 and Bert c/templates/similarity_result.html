@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEXT SIMILARITY</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+
+    <style>
+        /* Import Soft & Modern Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: black;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Video Background */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 25px;
+            background: rgba(250, 243, 224, 0.9); /* Soft Cream Background */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h2 {
+            color: #6a5acd; /* Soft Lavender */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result img {
+            max-width: 100%;
+            border: 2px solid #AEC6CF; /* Powder Blue Border */
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .score {
+            font-size: 22px;
+            color: #ff6f61; /* Warm Coral Pink */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6a5acd; /* Lavender */
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #6a5acd;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #ff6f61;
+            border-bottom-color: #ff6f61;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #AEC6CF, #F4C2C2);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(174, 198, 207, 0.8);
+        }
+
+        .back-button:hover {
+            background: linear-gradient(45deg, #F4C2C2, #AEC6CF);
+            box-shadow: 0 0 20px rgba(174, 198, 207, 1);
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay loop muted id="video-bg">
+        <source src="{{ url_for('static', filename='simv.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <a href="/dashboard" class="back-button">⬅ Back</a>
+
+    <div class="container">
+        <h2>Similarity Result</h2>
+        {% if score is not none %}
+            <div class="result">
+                <p class="score">Similarity Score: {{ score }}%</p>
+                <img src="{{ graph }}" alt="Similarity Graph">
+            </div>
+        {% endif %}
+        <a href="{{ url_for('similarity') }}">Check Again</a>
+    </div>
+</body>
+</html>
+

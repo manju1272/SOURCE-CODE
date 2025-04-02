@@ -1,0 +1,1055 @@
+DIGITAL AND MOBILE FORENSICS
+UNIT - I INTRODUCTION TO DIGITAL FORENSICS
+
+Forensic Science – Digital Forensics – Digital Evidence – The Digital Forensics Process –
+Introduction – The Identification Phase – The Collection Phase – The Examination Phase – The
+Analysis Phase – The Presentation Phase
+
+Introduction on Forensic Science
+The application of scientific methods to establish factual answers to legal problems. Forensic
+science is a branch of science that is widely popularized in fiction and in contemporary media.
+Forensic science in its broadest definition is the application of science to law.Whenever two
+objects come into contact with one another, there is an exchange of materials between them.
+The principle states that “when a person or object comes in contact with another person or
+object, a cross-transfer of materials occurs”
+Crime reconstruction can help test hypotheses about a possible chain of events. It leverages the
+five-step process for event-based crime scene reconstruction.
+1) Evidence examination: Identify and characterize evidence relevant to an incident.
+2) Role classification: Examine the role of the evidence as a cause or effect of an event.
+3) Event construction and testing: Identify events and assess whether they are possible.
+4) Event sequencing: Combine events into event chains.
+5) Hypothesis testing: The hypothesis is tested using the scientific method.
+5WH defines the objectives of an investigation as who, where, what, when, why, and how. The
+5WH formula sets the following objectives:
+1. Who: Persons involved in the investigation, including suspects, witnesses, and victims
+2. Where: The location of the crime and other relevant locations
+3. What: Description of the facts of the crime in question
+4 When: The time of the crime and other related events
+5 Why: The motivation for the crime and why it happened at a given time
+6 How: How the crime was committed.
+
+The digital forensic process is a normative approach of conducting digital forensics investigations.
+It is primarily grounded on a traditional physical forensics investigation process and includes all
+required phases. These phases include the original notification, through the reporting to the final
+presentation of the findings.The first principle is evidence integrity, which refers to the
+preservation of evidence in its original form. This is a requirement that is equally valid both for the
+original evidence when it is collected, as well as for the copy of the evidence that is used for
+analysis and then referred to when evidence is presented to a court.
+The second principle is chain of custody, or the ability to document all actions done to the evidence
+in order to prove its authenticity and integrity.
+The first responder in a criminal case is typically a police officer, arriving at a physical scene of an
+event, such as at a crime scene. The first responders are the ones responsible for handling potential
+
+evidence, including digital devices. Imagine that you arrive at a crime scene as the first responder,
+and there is a hypothesis that someone has committed a crime. Evidence of how it happened, when
+it happened, and who did what might be found in the smartphone laying on the counter, on the
+compact camera on the shelf, or on the laptop playing music.The ability to document all actions
+done to the evidence in order to prove its authenticity and integrity.
+Evidence integrity refers to the preservation of evidence in its original form. This is a requirement
+that is equally valid both for the original evidence when it is collected, as well as for the copy of
+the evidence that is used for analysis and then referred to when evidence is presented to a court.
+Cryptographic Hashes: In order to verify evidence integrity is preserved, a concept known as
+digital fingerprinting is applied. This involves the use of cryptographic (or oneway) hash
+functions. The input to a hash function is a bit stream, which can come from a file, a disk, or a
+partition, and the output is the unique hash or signature of that input stream. By comparing the
+hashes of an original with those of its respective copy, one can verify that a copy is the exact same
+as the original.
+Many digital forensics toolkits and software suites come with their own file formats or databases
+to store information that has been collected in a structured manner. First and foremost is the raw
+data format, which is used to copy the data source “as is.” The more extensive storage formats are
+EnCase, SMART, AFF, and Prodiscover. Forensic file formats typically support the most
+common data sources, such as block devices, hard disk images, and computer memory.
+Forensic science is a branch of science that is widely popularized in fiction and in contemporary
+media, ranging from Sir Arthur Conan Doyle’s first Sherlock Holmes novel A Study in Scarlet
+published in 1887 to today’s CSI and similar crime shows. It is commonly understood that forensic
+science is both highly inquisitive, requiring a creative mindset, and formalistic, requiring a strict
+adherence to established processes. An authoritative textbook in the field, Criminalistics, states that
+“forensic science in its broadest definition is the application of science to law.” The terms
+criminalistics and forensic science are used interchangeably, although criminalistics has a stronger
+flavor of the services of a crime laboratory.
+Forensic Science The application of scientific methods to establish factual answers to legal
+problems.
+A forensic scientist is responsible for the important task of establishing facts related to questions
+such as: what has happened how did it happen, who has been involved, and when did it occur? To
+solve such problems, a forensic scientist draws on methods and tools from a wide range of
+theoretical and applied sciences, including biology, medicine, physics, geology, computer science,
+and electrical engineering. As it is often not possible to answer a problem with full certainty, a
+forensic scientist is also trained to apply statistics to express the results in terms of probabilities.
+History of Forensic Science
+Forensic science was established as a separate scientific domain during the 1800s and early 1900s.
+The contributions of this new area of science dramatically changed the effectiveness of law
+enforcement. A comprehensive overview of the contributions is available in Saferstein (2007), but
+some notable innovators and milestones are:
+ Mathieu Orfila (1787–1853), considered the father of forensic toxicology, published the
+first scientific text on forensic toxicology in 1814.
+ Alphonse Bertillon (1853–1914) developed a method for identification through body
+measurements and published a system on personal identification in 1879.
+ Francis Galton (1822–1911) studied fingerprints as a means of identification and published
+
+the book Finger Prints in 1892.
+ Hans Gross (1847–1915) established the principles for the application of science in
+investigations in several publications, the first one in 1893.
+ Alberts S. Osborn (1858–1946) established scientific principles for document examination
+and published the book Questioned Documents in 1910.
+ Leone Lattes (1887–1954) studied characteristics of blood types for identification and
+created a method for the analysis of blood groups in blood stains in 1915.
+ Edmond Locard (1877–1966), recognized worldwide for promoting the scientific method
+in criminal investigation, established a police laboratory in Lyon in 1910.
+Locard’s Exchange Principle
+Edmond Locard formulated the famous Locard’s exchange principle, which has served as an
+important principle for subsequent research within forensic science. The principle states that “when
+a person or object comes in contact with another person or object, a cross-transfer of materials
+occurs” (Saferstein, 2007). In this way, every criminal can be connected to a crime through trace
+evidence. It should, however, be noted that the principle cannot necessarily be directly applied to
+digital forensics, as the dynamics of digital evidence is different from that of physical evidence.
+Definition 1.2: Locard’s Exchange Principle Whenever two objects come into contact with one
+another, there is an exchange of materials between them.
+Crime Reconstruction
+Crime reconstruction (or crime scene reconstruction) is the process of determining the most likely
+hypothesis, or sequence of events, through the application of the scientific method.
+Crime Reconstruction by Chisum and Turvey (2008).
+Crime Reconstruction Crime reconstruction is the determination of the actions and events
+surrounding the commission of a crime. A crime reconstruction can leverage a wide range of
+forensic methods, for example firearm ballistics tests, statistical simulations, and biological
+experiments. The objective is to establish a hypothesis about the event or sequence of events and
+then to test whether the hypothesis is possible or not. If the hypothesis is confirmed,then one
+possible explanation has been identified. If it is refuted, then the explanation is not possible and
+other hypotheses will have to be considered.
+Investigations
+An investigation is a systematic examination, typically with the purpose of identifying or verifying
+facts. A key objective during investigations is to identify key facts related to a crime or incident, is
+referred to as 5WH
+5WH defines the objectives of an investigation as who, where, what, when, why, and how. The
+5WH formula sets the following objectives (Stelfox, 2013):
+1. Who: Persons involved in the investigation, including suspects, witnesses, and victims
+2. Where: The location of the crime and other relevant locations
+3. What: Description of the facts of the crime in question
+4 When: The time of the crime and other related events
+5 Why: The motivation for the crime and why it happened at a given time
+6 How: How the crime was committed.
+Evidence Dynamics
+Evidence dynamics is defined as “any influence that adds, changes, relocates, obscures,
+contaminates, or obliterates physical evidence, regardless of intent” (Chisum & Turvey, 2000). The
+concept is useful in understanding the actual behavior of evidence and plays an important role in
+crime scene reconstructions. Although the definition is originally intended for physical evidence, it
+is equally applicable to digital evidence. For example, evidence dynamics can describe the
+mechanisms for writing to a sector on a hard drive, or the operations for creating, changing, or
+deleting a file in a file system.
+
+Evidence Dynamics Evidence dynamics refers to any influence that adds, changes, relocates,
+obscures, contaminates, or obliterates evidence, regardless of intent.
+Digital Forensics
+Digital forensics refers to forensic science applied to digital information, whereas a digital
+investigation refers to investigations in the digital domain. Definition from the first Digital
+Forensics Research Workshop (Digital Forensics Research Workshop, 2001),
+The use of scientifically derived and proven methods toward the preservation, collection,
+validation, identification, analysis, interpretation, documentation, and presentation of digital
+evidence derived from digital sources for the purpose of facilitating or furthering the reconstruction
+of events found to be criminal, or helping to anticipate unauthorized actions shown to be
+disruptive to planned operations. Other terms, such as network forensics,device forensics, and
+Internet forensics, are often used to label specialized fields within digital forensics. As information
+technology has become an integral part of all aspects of society, digital forensics is growing in
+importance. Most legal cases today have an aspect of digital forensics, involving for example
+mobile phones, credit card transactions, email systems, Internet logs, and GPS systems.
+As many types of digital evidence can be volatile and easily manipulated, the trusted preservation
+of evidence through the use of standardized forensic tools and methods has become essential. You
+may have previously seen references to digital archaeology and digital geology when discussing
+digital forensics. Digital archaeology refers to digital traces in computer systems created by human
+behavior, whereas digital geology refers to digital traces created by the computer systems
+themselves as part of their inherent processes. The goal of digital forensics is usually to gather facts
+about human behavior (i.e., digital archaeology), but it is a prerequisite to understand how the
+computer systems behave (i.e., digital geology) in order to interpret digital evidence. As forensic
+scientists and forensic practitioners, our role in digital forensics is to establish factual answers to
+legal problems. This responsibility calls for strong standards for the processing of evidence and for
+the soundness of the analysis and its conclusions.
+Crimes and Incidents
+An important consideration for digital forensics is that it is commonly applied both in criminal law
+and in private law. Law enforcement increasingly depends upon digital forensics to process digital
+evidence in the context of a crime under investigation, whereas public and private companies and
+organizations depend upon digital forensics as a tool for supporting legal action in the case of an
+incident (e.g., contract or policy violations). Digital crimes and incidents consist of a digital event
+or a sequence of events. The location of the incident is referred to as the scene of the incident, or in
+the case of a crime, the digital crime scene. The field of digital forensics addresses with an
+emphasis on after-thefact forensic analysis (often referred to as post mortem). Digital forensics can
+be initiated by real-time detection of cybersecurity incidents (e.g., intrusion detection) or as part of
+security incident handling processes. However, the topics of security monitoring and security
+incident management are not addressed in this textbook, as these are separate fields with different
+processes, contexts, and objectives.
+Digital Devices, Media, and Objects
+A central distinction in digital forensics is that between digital devices, digital media, and digital
+objects. A digital device is a physical object, such as a laptop, a smartphone, or a car. A digital
+device necessarily contains one or more storage media, such as a hard drive or memory, referred to
+as digital media. The digital media contain data, stored in binary format, referred to as digital data.
+Forensic analysts often work with discrete collections of digital data, referred to as digital objects.
+Forensic Soundness and Fundamental Principles
+The scientific method refers to the use of “a method or procedure . . . consisting of systematic
+observation, measurement, and experiment, and the formulation, testing, and modification of
+hypotheses”. Ideally, this should also be the gold standard for digital forensics, with the implication
+that any investigation of digital evidence must be entirely reproducible by a third party. However,
+our ability to capture digital evidence in real life is far from perfect, and forensic soundness has
+therefore come to mean that the professionally recognized principles and standards of digital
+forensics are observed.
+
+Forensically Sound An investigation is forensically sound if it adheres to established digital
+forensics principles, standards, and processes. The two fundamental principles are evidence
+integrity and chain of custody. Evidence integrity refers to the preservation of evidence in a
+complete form without any intentional or unintentional changes,
+Evidence Integrity Evidence integrity refers to the preservation of evidence in its original form.
+While evidence integrity is an ideal in digital forensics, it is often not achievable, as data inevitably
+changes in live computer systems and networks during investigations. Due to this, documentation
+of all steps in the investigation is an important objective.
+Chain of Custody Chain of custody refers to the documentation of acquisition, control, analysis,
+and disposition of physical and electronic evidence. It should be noted that there are, of course,
+many other important principles in digital forensics, some of which are extensively discussed in
+this textbook. We have chosen to adopt these two principles as fundamental principles that should
+be observed throughout all phases of the digital forensics process.
+Crime Reconstruction in Digital Forensics Crime reconstruction can help test hypotheses about a
+possible chain of events. It leverages the five-step process for event-based crime scene
+reconstruction.
+1) Evidence examination: Identify and characterize evidence relevant to an incident.
+2) Role classification: Examine the role of the evidence as a cause or effect of an event.
+3) Event construction and testing: Identify events and assess whether they are possible.
+4) Event sequencing: Combine events into event chains.
+5) Hypothesis testing: The hypothesis is tested using the scientific method.
+The method can also be applied in the case of digital forensics through the use of physical or
+virtual testbeds set up to perform simulated experiments
+Digital Evidence
+Central to any digital investigation is the notion of digital evidence.
+Digital evidence is defined as any digital data that contains reliable information that can
+support or refute a hypothesis of an incident or crime. In digital forensics, we aim to process
+and store digital evidence in a way that is consistent with the principles of evidence integrity
+and chain of custody. A number of digital evidence storage and exchange formats have been
+developed to support this, but close attention to a manual process and detailed documentation
+of the chain of custody are nonetheless required.
+1 Layers of Abstraction: It is useful to view digital evidence in the context of layers of
+abstraction. This refers to the practice, used in all areas of computing, of hiding
+implementation details of higher layers of abstraction in order to reduce complexity. A forensic
+analyst has to analyze and reconstruct data at all layers of abstraction to be able to extract and
+explain relevant digital evidence. For example, a forensic analyst may have to analyze data at
+the binary level of a disk drive to reconstruct a text file that contains an email with content
+relevant to the investigated case. A well-known example from computer networks is the Open
+Systems Interconnection (OSI) reference model, which divides network protocols into seven
+layers of abstraction
+2 Metadata Metadata is a valuable source of evidence in digital forensics that will be
+thoroughly discussed in this textbook. Metadata, or data about data, contains information about
+data objects. For example, the metadata associated with a digital photograph can contain the
+time of taking the photo, the geographical location, and the camera used. The analysis of
+metadata is an important activity throughout the forensic process, as metadata can contain
+information that is key to solving a case.
+3 Error, Uncertainty, and Loss Other aspects of digital evidence that have to be understood
+by a forensic scientist are error, uncertainty, and loss. Such uncertainties can impact the
+interpretation of timestamps, geographical location, and authorship or ownership of data. This
+must be understood in the context of evidence dynamics in order to accurately interpret and
+present digital evidence in a legal context. Failure to do so can lead to a weakened or lost case
+in court, or even the wrongful conviction of an innocent.
+
+4 Online Bank Fraud – A Real-World Example To better facilitate learning across the topics
+covered in this textbook, we will refer to the real-world online bank fraud example of SpyEye.
+This case is particularly relevant for us, as it is both legally and technically complex, with
+relevance to all the chapters in this textbook. The case is well documented, as it has been
+investigated by the US Federal Bureau of Investigation (FBI) and tried in public court with
+broad media coverage. The hackers behind the malware were recently convicted to a total of 24
+years in prison.
+Example 1: Modus Operandi Online bank fraud is a well-known crime pattern in which a
+large number of computers are compromised and infected with Trojan malware, allowing their
+computers to be monitored and remote controlled. The computers are part of a network of
+infected computers – a botnet – and typically controlled by one or more command-and-control
+centers. Once established, the botnet is continuously monitored to gather personal information
+and credentials, and to establish an overview of the online bank accounts accessed by the
+victims through the compromised computers.
+
+At some point during a regular online bank session, when a victim is active, the command-and-
+control center issues an instruction to initiate a transaction of a specific amount of money from
+
+a victim’s account. The Trojan malware, having circumvented the security of the online
+banking session, fools the unsuspecting victim to authenticate and authorize the transaction.
+When such an illegitimate transaction is completed, an amount of money is transferred to a
+complicit third party – a money mule – whose primary task is typically to withdraw the money
+and transfer it to a (possibly foreign) account in a jurisdiction that is more forgiving to
+financial fraud and cybercrime.
+The crime pattern involves multiple actors and a long-term commitment, requiring a criminal
+organization with access to highly specialized competencies and tools. Central actors in such
+schemes are thus the malware programmers, the commandand-control center managers, the
+mules, as well as the organization that is recruiting the mules and profiting from the operation.
+Access to the required botnet, consisting of the command-and-control center and a network of
+compromised computers with active malware, can be purchased as a service on underground
+forums. The victims are both the online bank customers and the financial institutions.
+Example 2: The SpyEye Case The SpyEye case closely followed this pattern, infecting 50
+million computers worldwide and compromising at least 10,000 bank accounts. The convicted
+programmers responsible for the malware and botnets, Aleksandr Andreevich Panin
+(“Gribodemon”) of Russia and Hamza Bendelladj (“Bx1”) of Algeria, were subsequently
+sentenced to a total of 24 years in prison for causing losses to financial institutions and
+individuals of close to a billion US dollars. One of Panin’s clients reportedly made $3.2 million
+in 6 months. Due to the scale and complexity of the case, law enforcement agencies from
+several countries were involved in the investigations, supported by cybersecurity experts from
+the private sector. From a technical perspective, the investigation ranged from the forensic
+analysis of a large number of infected computers, to online investigations of their distribution
+and sale in underground forums, and to tracing and identifying the perpetrators and malware
+where forensics is complicated by obfuscation and anti-forensic countermeasures.
+
+Digital forensic and digital evidence
+All three terms - digital forensics, computer forensics, and mobile device forensics - deal with
+recovering and analyzing digital evidence, but they have some key distinctions:
+Digital Forensics:
+ This is the umbrella term encompassing the recovery and investigation of digital evidence
+from any electronic device.
+ It includes computer forensics, mobile device forensics, network forensics (examining
+network traffic), cloud forensics (data stored in the cloud), and even embedded device
+forensics (e.g., digital cameras).
+ Digital forensics establishes the principles and methodologies for handling evidence in a
+legally sound manner, ensuring its admissibility in court.
+
+Computer Forensics:
+ This is a subfield of digital forensics that specifically focuses on recovering evidence
+from desktop and laptop computers.
+ Traditional computer forensics primarily deals with hard drives and solid-state drives
+(SSDs), but may also include peripherals like USB drives.
+ Techniques used in computer forensics are well-established and often involve creating
+forensic copies of storage devices to avoid altering the original evidence.
+Mobile Device Forensics:
+ This is another subfield of digital forensics that concentrates on extracting evidence
+from mobile devices like smartphones and tablets.
+ Mobile devices present unique challenges due to their volatile nature (data can be easily
+overwritten) and the variety of operating systems and encryption methods employed.
+ Mobile device forensics specialists use specialized tools and techniques to recover deleted
+data, analyze application activity, and extract information from SIM cards and other
+components.
+identification phase
+The Identification Phase Incidents can be identified based on complaints, alerts, or other
+indications. The identification phase forms the basis for all the following phases or activities
+during the digital investigation. For example, it can be used to identify which evidence or
+objects to look for during the investigation.
+
+The identification of an incident or a crime leads to the formation of a hypothesis about what
+might have happened. An investigation can focus on identifying supporting information to
+prove a case, identifying information that refutes a case, or verifying the validity of any given
+information. The questions defined by the 5WH model should always be raised during the
+identification phase. They help us to establish a hypothesis based on the information triggering
+the investigation. As investigators, we operate with a preliminary hypothesis about a digital
+device or system that may contain potential digital evidence. In the case of computer and file
+system analysis, the identification step includes making a determination about which files on a
+volume are available, active, or deleted.
+The Identification Phase The task of detecting, recognizing, and determining the incident or
+crime to investigate.
+1 Preparations and Deployment of Tools and Resources Proper planning helps prevent poor
+performance or substandard results in an investigation, and it is a precondition for an efficient
+and effective investigation. This is applicable for investigations of all types of incidents,
+including digital crimes. The event-based digital investigation process is as a well-established
+reference in the field. Law enforcement agencies, digital forensic units, and corporate
+investigators all need to be well prepared before a crime or incident even occurs. A trained
+team of investigators is crucial for determining what occurred, based on the digital objects at
+hand. The ability to have access to such a team depends, of course, on the resources available.
+Since no two cases are the same, it can be difficult to make decisions on investigative resource
+allocation.
+A readily available investigative infrastructure, such as a lab and available tools, is an
+advantage when making such decisions. Guidelines and principles for building a forensics
+laboratory are presented in Watson and Johnson (2013).
+Many commercial vendors and open source communities provide toolkits and digital
+forensics platforms to be used for investigations. The choice of tools depends on the resources
+available and the ambition and objective of the agency or unit. The forensic soundness of the
+
+tools must be assessed, as they have to support the principles of evidence integrity and chain of
+custody. For a physical crime scene, readiness can range from fingerprint analysis to DNA
+profiling to any special-purpose imaging equipment for recording the layout of a physical
+scene. For cases involving electronic devices, it may include tasks such as the setup and
+configuration of digital forensics software and hardware. All preparations done before the
+investigation are part of the preparation phase.
+A digital crime scene has been classified as a sub-environment of a physical crime scene.
+In an example, a computer located beside a dead body may play a part in an investigation. A
+digital crime scene requires investigation of the hardware, software, and data that may hold
+digital evidence. It is an iterative activity, as multiple physical devices may be found and
+investigated sequentially. An important component of the digital crime scene investigation
+phase is an understanding of the forensic and core processes for sound investigations. We can
+generalize the physical and digital crime scene concept to be applicable also for those scenes of
+incidents that produce corporate investigations, where a policy has been breached. When an
+incident is recognized, a confirmation is generally required to authorize and initiate a forensic
+investigation. For example, if the investigation includes critical IT systems or services, then a
+corporation may have to authorize the investigator’s access to the potential evidence sources.
+Additionally, if these systems are operational, then special care must be taken and the
+investigation activities must be coordinated with the system owner. In criminal cases, seizure
+of physical items with digital data is performed by law enforcement personnel with appropriate
+search warrants. It is generally recommended that they are trained in the seizure of digital
+evidence, or that they consult with digital forensics experts in order to ensure none of the
+seized evidence is compromised. What can be seized in respect to legal and ethical
+perspectives must be considered at the scene of the event.
+2 The First Responder The first responder in a criminal case is typically a police officer,
+arriving at a physical scene of an event, such as at a crime scene. The first responders are the
+ones responsible for handling potential evidence, including digital devices. Imagine that you
+arrive at a crime scene as the first responder, and there is a hypothesis that someone has
+committed a crime. Evidence of how it happened, when it happened, and who did what might
+be found in the smartphone laying on the counter, on the compact camera on the shelf, or on
+the laptop playing music. Perhaps there is even additional evidence at an unknown physical
+location in a cloud service. All scenes are different, and so are the digital devices that might be
+relevant to the case in question. The digital objects found on one device might not be the sole
+source of evidence, or it might not be enough to bring a case to court or convict anyone of a
+crime. Other evidence sources thus need to be accounted for, reinforcing the need to have a
+complete perspective of the scene of the event you are investigating. As an aid to the first
+responder, standard operating procedures (SOPs) should be in place to provide structured
+evidence identification activities, including documentation, to maintain evidence integrity
+3 At the Scene of the Incident A scene of an incident is simply the location (or set of
+locations) where an incident took place or evidence is found. With respect to a digital scene in
+an incident, it is important to understand typical characteristics of a traditional physical scene
+or the origin of where we believe it (being a crime, incident, or event) all started. A great deal
+of digital evidence can be found in a private home, as illustrated in Figure 2.4. Many of these
+devices communicate using wireless networks, which in turn connect to other devices outside
+the physical premises of the residence. Furthermore, adversaries may also access the network,
+especially where there is a lack of adequate network access control. In addition, extended
+digital evidence sources such as cloud storage and common email services may be present and
+linked to individuals with access to the residence.
+3.1 Preservation Tasks The processing of potential evidence normally starts during the
+identification phase, and it is crucial to preserve the chain of custody and evidence integrity
+from the very start. This includes activities to isolate, secure, and document the physical and
+digital devices at hand. Evidence preservation may require the assessment of technologies for
+subsequent copying of the original media, establishing time synchronization, and any other
+tasks that facilitate additional forensic activities. The documentation activities begin from the
+moment the investigator starts handling the digital devices that will be “touched” during the
+
+investigation phases. The documentation enables reproducibility of results and traceability
+from the physical object’s origin to the final evidence presentation. This calls for thorough
+documentation throughout the digital forensic process.
+4 Dealing with Live and Dead Systems Physical equipment that holds potential digital
+evidence is identified either as live (turned on) or dead (turned off, with no power):
+ By live systems, we mean systems that are running and are at the time of identification
+potentially holding evidence that may be lost or hard to acquire if the system is shut down.
+ By dead systems, we mean systems not running. Any data in temporary storage areas such
+as cache, main memory, running processes, or active application dialogues on a computer
+will normally be lost when the system is powered down.
+Definition 2.2: Post Mortem Post mortem analysis is, in the context of digital forensics,
+associated with analysis of a “dead” (not running) computer or electronic device.
+Turning on a system that was initially turned off might also lead to evidence loss. At boot time,
+a PC, mobile phone, or media player executes boot activities that can overwrite previously
+cached data. Cell phones, media players, laptops, or any devices that can communicate over
+any network can potentially be altered while being seized or even after they have been seized.
+This can be caused by either deliberate tampering or unintentional changes (e.g., due to
+humidity or electricity). Because of this, one should consider the use of containers that can
+shield the device from external radiofrequency (RF) sources, such as a Faraday bag.
+5 Chain of Custody If we have identified a removable storage media, which we believe has
+something to do with a crime. We must ensure that we first copy (or “clone”) the raw data from
+the device before we can start searching for evidence of the crime in question. To ensure that
+we do not alter or change the data stored on the device during the copying process, we can use
+read-only mode when accessing the data. In turn, this can be enforced through software or
+hardware that is typically known as write-blocking technology. This ensures that the copy
+represents the exact same data as was stored on the media. Only then can we be sure that what
+we find while analyzing the copy will match what can be found on the original. The
+documentation of these tasks is crucial to preserving the chain of custody. After copying, we
+generate a digital signature of the storage media by using a cryptographic hash function. By
+computing a digital signature both for the original storage media and for the copy, we can
+compare them to verify that the content is identical. This is important information that supports
+the chain of custody and evidence integrity. It means that we can continue the investigation on
+a copy, but still confidently refer back to the original source. All changes, such as copying,
+case information, and information about how it was collected and who was involved, must be
+documented. Multiple tools can be used to collect the data and to generate a hash to avoid any
+uncertainties in the tools used (referred to as dual-tool verification). Most digital forensics tools
+have reporting capabilities. These reports are often incorporated into or appended to case
+reports. Digital forensics software and tools can also provide automated reports, which
+typically reflect changes made by an investigator while using the tool. Most tools also support
+forms that the investigator must fill out, related to the case and the investigated physical or
+digital object in question. At a minimum, the documented information should cover the
+following:
+ the person handling the evidence;
+ processes and procedures performed;
+ the time and date of evidence acquisition;
+ original location of the evidence collected;
+ method of collection, examination, and analysis; and
+ the reason for collecting the evidence.
+Intentional (tampering) or unintentional (accidental) changes to digital evidence, as for
+physical evidence, is a risk in any digital investigation. In order to maintain the integrity of the
+evidence, precautions should be taken to ensure that the tools used for acquisition,
+examination, and analysis of data will not modify it in any unexpected way. To ensure the
+chain of custody, the use of integrity checks and timestamps of forensic activities should be
+applied. Various kinds of supporting data and documents may be used for supporting the chain
+
+of custody, for example:
+ photographs,
+ reports,
+ laboratory information management systems,
+ notebooks,
+ checklists,
+ log files, and
+ videos and screen captures.
+The chain of custody is a critical element of the digital forensics process, as we shall see in
+later sections of this chapter. In some jurisdictions, evidence could be excluded from a case
+(deemed not admissible) if the vital elements of the chain of custody listed here are not
+documented.
+Analysis Phase
+In the analysis phase, forensic investigators determine the digital objects to be used as digital
+evidence to support or refute a hypothesis of a crime, incident, or event.
+Definition 2.7: The Analysis Phase the processing of information that addresses the objective of
+the investigation with the purpose of determining the facts about an event, the significance of the
+evidence, and the person(s) responsible. Following the examination phase, the data is prepared for
+analysis. Statistical methods, manual analysis, techniques for understanding protocols and data
+formats, linking of multiple data objects (e.g., through the use of data mining), and time lining are
+some of the techniques that are used for analysis. Computational methods are applied for the
+purpose of automating analysis tasks and for recognizing patterns through machine learning. As for
+all other investigative phases, the chain of custody is also important for the preservation and
+traceability of the collected data in the analysis phase. The analysis phase is an iterative process in
+itself. We often operate with preliminary hypotheses about data that may potentially contain
+evidence, but during the analysis one forms new hypotheses about the case that may require
+collection of additional data objects. Investigations proceed in this manner until the results can be
+considered sufficient for the purpose of the investigation, though in many cases this might be
+practically infeasible.
+1. Layers of Abstraction What you see is not always what you get. One has to recognize this as a
+fact when analyzing digital media, regardless of the storage media chosen. In the case of file
+system forensics, data seen by an application is not the same as what is seen by an operating
+system and, again, not the same as what is actually stored in bits and bytes on the storage device. A
+deleted file, for example, can be fragmented over multiple sectors of a hard drive, and new files
+might overwrite some of the sectors fully or partially. However, this does not mean that one cannot
+get access to those sectors or even parts of sectors that have not yet been overwritten.
+2. Evidence Types Any case will have its own evidence, depending on the type of crime. For
+example, the evidence of a physical crime, where clues regarding the motivation of the crime can
+be found in a digital device owned by the suspect or the victim will be much different from the
+evidence of a cybercrime conducted from a computer. Imagine investigating a case where a
+computer has been seized for you to analyze. Examples of potential evidence can be the
+information found in an email file, such as a message that was sent from a specific email address.
+The address can then be linked to one person and sent to another person’s email. Another example
+can be a malicious application that was found installed on a system unbeknownst to the person
+owning that system. The Trojan horse defense is a well-known concept intended to complicate
+digital forensics investigations. To prove or disprove the validity of a Trojan horse defense requires
+thorough analysis.
+3. String and Keyword Searches String and keyword searches may simplify the analysis. This is
+a targeted analysis technique that can be used if one knows what to look for. Imagine an illegal
+drug case where the investigation was triggered based on a reported crime with specific
+information about a person and a certain drug or its code name. The name of the person or the drug
+can be used as a keyword to search through the potential evidence media sources. Keyword
+searches can be automated or scripted with the use of forensic tools. Pattern matching is a similar
+
+method that can be applied. Depending on the scope and the task of an investigation, some patterns
+can be more interesting than others. For example, Social Security numbers can be relevant for
+identity theft cases, and account numbers or credit card numbers for fraud cases. Regular
+expressions are used to automate the search for all strings with the pattern that you are searching
+for. Consider an electronic fraud case where one has information about bank accounts, credit card
+numbers, IP addresses, and URLs. These parameters can be searched for by using regular
+expressions. If some of the identifiers are known, then the values can be directly searched for to
+identify whether any of these values were present in the system or device analyzed. Other search
+properties or regular expressions of interest can be:
+1. Phone numbers;
+2. Social Security numbers (SSNs);
+3. addresses (IP, email, and physical home or work, along with website URLs);
+4. file properties such as name, type, size, date of creation, and when accessed;
+5. special language and characters; and
+6. religious, cultural, or social relations and characteristics.
+4. Anti-Forensics Due to the ever-increasing storage capacity of modern digital devices, digital
+forensics is comprehensive and challenging work by itself. However, certain techniques are used to
+make forensic analysis of digital evidence even harder. These are known as anti-forensics, which
+refers to a deliberate attempt to increase the difficulty of performing digital forensics by
+eliminating or reducing the ability to access evidence.
+4.1. Computer Media Wiping Both corporations and criminals apply wiping tools with the
+purpose of obliterating data. For companies, these techniques are used to reduce the risk
+represented by hard drives and other media containing sensitive corporate information when
+outside their control. Another typical example of wiping, used by both corporations and personal
+users, is remote wiping of lost or stolen devices. The degree of how much data may be permanently
+removed varies among the techniques and tools used. These tools can be both software and
+hardware based, functioning on different levels of the target: file level, device level, or component
+level.
+4.2 Analysis of Encrypted and Obfuscated Data Malware developers have for a long time
+utilized anti-forensics mechanisms and techniques. This makes forensic analysis of both the
+functionality and origin of malicious software difficult. Encryption of configuration files is a
+typical technique, especially for botnet malware where the botnet masters want to avoid breaches
+of the command-andcontrol mechanisms used to control the bots. As forensic analysts, we should
+separate the use of encryption for anti-forensics purposes from the use of encryption to secure data.
+Corporations may encrypt digital devices to avoid a data breach when a device is stolen. In this
+case, there are typically recovery keys centrally stored to recover the files if necessary. These keys
+may be accessed by forensic analysts, provided that authorization is provided. In contrast, where
+criminals have used encryption, the investigator may not be able to acquire or recover the keys
+without obtaining the passwords from the owner of the digital device.
+Steganography is another technique that can be used to complicate forensic analysis. This can
+be done by a range of data-hiding or steganography applications by storing files in nontraditional
+storage locations, changing file formats, or including a hidden message in photographs to avoid
+suspicion.
+5 Automated Analysis Large data volumes, obfuscated malware, and techniques to remove their
+traces make it time-consuming, costly, and difficult for forensic personnel to identify and analyze
+relevant evidence. This is especially difficult when evidence is present over a large collection of
+computers, Computational forensics, discusses methods for analyzing large amounts of data or
+highly unstructured datasets that are otherwise difficult to analyze manually. Data mining,
+especially link-mining techniques, can be applied to the large and complex datasets collected
+during investigations. Manual analysis is time-consuming, and analysts often develop scripts and
+program code to automate their tasks, such as when they search for relevant forensic artifacts.
+Digital forensic tools are being introduced with more forensic analytics capabilities to reduce the
+manual efforts of analyzing large data volumes.
+
+6. Timelining of Events Timelining is a powerful tool for forensic analysis and contextual
+awareness. Many forensic tools can automatically structure files and data based on the time they
+were accessed, last changed, or deleted. Figure 2.18 shows an example of a file timeline using
+Autopsy, based on when each file was last modified. Whether timestamps can be linked to a digital
+object depends on the metadata tied to the object. In file system forensics, timestamp metadata is
+generally available. A timeline of a chain of events can include physical events, as well as digital
+events. Imagine a case where a murder has been committed and you investigate the cell phone of
+the victim. The activity revealed on the cell phone, such as call logs, can provide relevant evidence
+related to the timeline of the crime. Analyzing system and application logs can provide a structured
+chain of events in time. Logs are useful when trying to trace recent or past activities and system
+behavior related to system users or abnormal users. The content of such logs may vary and depends
+on the log’s primary purpose. For example, for critical systems that require a high level of
+protection, firewall, or intrusion detection, system logs may reveal the potential origin of a
+cyberattack. Legal and commercial requirements often exist to ensure that corporations are able to
+quickly ascertain the chain of events when an incident or crime occurs.
+7. Graphs and Visual Representations The relationships between data objects, individuals, files,
+and network interactions are all easier to grasp when presented graphically. Many applications and
+tools exist to present data in a visual manner that is based on a set of common attributes, such as
+email addresses found across a set of digital devices related to a crime or an incident. Visualizing
+the sending and receiving entities of those emails may reveal that one entity was more involved
+than others, or is even the hub of all communication with all other entities.
+8. Link Analysis Link analysis is a powerful and emerging discipline in digital forensics. The goal
+of link analysis is to produce a structured presentation of interconnected and linked objects. One
+can gain a better understanding of the relationships and associations among them when links are
+visualized in graphs, for example where nodes in the graph represent entities and objects. Link
+analysis is a valuable tool for digital forensics, law enforcement, and intelligence, as illustrated in
+Figure 2.19 using the tool Maltego. It is also frequently applied in the field of social networks, the
+World Wide Web (e.g., interconnected by hyperlinks), medical domains, and financial and
+bibliographic domains.
+
+Steps in collection phase
+In a digital forensics investigation, the collection phase refers to the acquisition or copying of
+the data. This is when a forensic investigator gains access to the electronic device(s) containing
+raw data that has been identified as relevant for the specific case. The collection phase of the
+digital forensics process is common to most literature and scientific research in digital
+forensics. The majority of literature that discusses the forensics process uses the term
+collection, whereas more technically oriented literature refers to an acquisition and/or
+extraction.
+
+The data being investigated should always be copied to a separate media, and the forensic
+examination and analysis should always work on a copy. This ensures that there are no accidental
+data changes to the original during the forensic process. In addition, a write blocker (either in
+hardware or in software) is typically employed to guarantee that no data is written to the original
+storage media. Finally, a digital signature (a cryptographic hash) is calculated both for the original
+media and for the copy. To support a forensically sound collection, the Digital Forensics Workshop
+2001 jointly stated the importance of collecting relevant data using approved methods. On the basis
+of the concepts and tasks addressed.
+Definition: The Collection Phase Collection of data from digital devices to make a digital copy
+using forensically sound methods and techniques. Metadata about a case should be tied to the
+potential evidence, whether it be a physical device or a data file. Such metadata can include the
+case name, case number, examiner (the digital forensics investigator or investigators), timestamps,
+case and seizure location, and time zone.
+Whether data is easy to acquire or not depends in part on whether systems or services have already
+been prepared for the logging of events and storing or preserving data that will be used in a
+forensic investigation. If this is the case, potential digital evidence can be quickly made ready for
+use in a forensic investigation. This kind of preparedness is known as forensic readiness. Errors,
+uncertainty, and data loss are common challenges in digital investigations. The data collected will
+form the basis of information used for the later process phases. Because of this, carefully
+documenting all the factors that may introduce uncertainty, such as the origin of the collected data,
+the context of the case, or the location or context in which the digital device was found can help
+support further understanding the data collected.
+
+1. Sources of Digital Evidence
+
+Digital evidence includes any digital data that contains reliable information that supports or refutes
+a hypothesis about an incident. In today’s society, digital evidence can be found almost
+everywhere, and one could write a lengthy separate chapter with taxonomy of all possible digital
+evidence sources. We choose to focus on the most well-known sources of digital evidence, to serve
+as a reference and an inspiration for where one may find digital evidence. The most common
+source of evidence has traditionally been hard drives or other computer long-term storage media.
+An example of a hard disk and flash storage drives, main memory, GPU (graphics processing unit)
+memory, or a CPU with a cache, are all examples of this. Additional examples are external devices
+that can be connected to a computer, such as removable media, memory sticks, web cameras, and
+CDs, DVDs, and Blu-rays. Embedded devices can have removable and integrated storage media
+with proprietary connectors and physical interfaces. Imagine a memory chip from a
+remotecontrolled central garage opener, often used in apartment buildings with devices themselves
+(such as web servers and consumer devices), along with the Internet services accessed. The
+Internet, the services and applications it offers, along with all users and companygenerated data
+(blogs, online shops, forums, and chat services) provide additional sources of evidence.
+2. Systems Physically Tied to a Location
+In many cases, it is not possible to move, or remove, a system or digital device from its physical
+location. In such cases, the data needs to be copied at the physical location itself. A typical crime or
+incident could involve emails from a central corporate email server. The email server will, in most
+cases, not be removed from its physical location just because of one single email. It is up to the
+case investigators to determine if it is necessary to physically remove the digital device, in this case
+the email server.
+3. Multiple Evidence Sources In an investigation, it is rare that all potential digital evidence is
+present in a single digital storage device, such as a computer hard disk or a memory card. Relative
+to the case investigated, potential digital evidence can be present in multiple devices in one
+physical location or in several locations across the world.
+4. Reconstruction The collected media (or hardware) that stores data can be intentionally damaged
+by suspects trying to destroy evidence, or unintentionally, for example in a fire or accident. It is
+important to be aware of the fact that one cannot always expect to start copying data right away.
+5. Evidence Integrity and Cryptographic Hashes Evidence integrity is at the core of every
+forensic investigation. This is a requirement that is applied equally to both the original evidence as
+well as the copy used for analysis. In order to preserve evidence integrity, multiple factors must be
+considered, such as the integrity of individuals and the processes followed, both physically and
+logically. There are multiple measures to ensure evidence integrity in digital forensics. The intent is
+to ensure that evidence is neither accidentally nor intentionally changed when collecting digital
+data from an original source.
+Evidence integrity can be facilitated by using hardware or software write blockers, which protect
+the data source from anything but read access. There are software-based write blockers that
+typically restrict access rights in software to read-only. For example, in UNIX, read-only can be set
+for each file or a partition in order to preserve evidence integrity. In order to verify that integrity is
+preserved, a concept known as digital fingerprinting is applied. This involves the use of
+cryptographic (or oneway) hash functions. The input to a hash function is a bit stream, which can
+come from a file, a disk, or a partition, and the output is the unique hash or signature of that input
+stream. By comparing the hashes of an original with those of its respective copy, one can verify
+that a copy is the exact same as the original.
+Examples of cryptographic hash algorithms include MD5, SHA1, and SHA256. It should be noted
+that cryptographic algorithms become outdated over time, due to vulnerabilities in the algorithms,
+advances in cryptanalysis, and ever-increasing processing power. Both the MD5 and SHA1
+functions have been found to be vulnerable to certain attacks, but they are still in widespread use in
+forensic tools.
+Definition 2.4: Cryptographic Hash A cryptographic hash function is a nonreversible
+mathematical function that takes an arbitrary amount of data as input and returns a fixed-size string
+as output. The result is a hash value, and it is mathematically infeasible to find two different files
+that create the same hash. Be aware that in some cases, data inevitably changes during acquisition.
+
+An example is the case of a live computer system with multiple evidence sources that have
+different levels of volatility. In some cases, memory may have to be accessed in order to acquire a
+password, for the purpose of opening an encrypted archive file. The evidence integrity of the
+memory will not be preserved, and the activities required to access the memory, along with the
+chosen procedure and why, must be documented as part of the chain of custody.
+6. Order of Volatility Investigations rarely involves just one single digital device. Evidence may
+be present across multiple devices, such as a workstation, memory stick, and Internet email service.
+By analogy, if we apply the Heisenberg Principle of uncertainty to digital forensics, it is not just
+difficult but impossible to gather all the information from a computer system without changing its
+state. For example, data acquisition from one data source in a live computer may impact the data in
+another. Because of this, the term order of volatility (OOV) has become a central term in digital
+forensics.
+Definition 2.5: Order of Volatility Prioritization of the potential evidence source to be collected
+according to the volatility of the data. We understand that the order of volatility deals with data
+lifetimes. It is the concept of gathering the most volatile data first, as it will most likely be changed
+or destroyed first. Any operation will, however, affect data. This means that one has to carefully
+consider the context and goal of what to extract first to avoid damaging potentially crucial
+evidence. Data stored on disk is less volatile than data stored in memory. In cases where only data
+on a disk is to be extracted in a postmortem investigation, extraction of data from this media will
+be prioritized.
+
+Table 2.1, lists typical storage devices and media and their expected data longevity (the life
+expectancy of the data stored) in a running system. All lifetimes depend upon the influence of
+external factors, such as the use of the media, the SLA (service-level agreement) for cloud storage,
+or magnetic-field influences on tape media. In practice, it is difficult to determine what source is
+likely to be the most valuable. If time is critical, one may choose to pay less attention to the
+volatility perspective based on the situation, the crime in question, and the hypothesis of where
+relevant evidence can be found. Imagine that you are investigating a crime where you are presented
+with a live computer that may hold vital evidence for the crime in question. You do not know
+where the evidence can be found or what data you need. For example, the evidence you need might
+not be stored locally on the machine, but in encrypted cloud storage with encryption keys stored in
+a computer’s RAM. Shutting down the machine will destroy the keys. In order to access the most
+relevant data, we need to consider different factors before starting the collection process. Some
+methods have a given probability of succeeding for a given type of information. As shown in
+below Table 2.2, we can look at this as a matrix of information availability, where each factor
+affects the availability of the acquired information.
+
+7. Dual-Tool Verification
+Digital forensics is conducted using software applications and tools, often made by third parties.
+This is because data is preferably analyzed at higher layers of abstraction to make it easier to
+understand for the investigator. An investigator must trust the technology to present the
+information with a high level of data integrity. Dual-tool verification can be applied as a means to
+detect errors from one tool by using another tool to confirm the results. For example, during a
+forensic investigation, an investigator is extracting evidence from a broken memory stick. Through
+the use of an imaging tool to acquire a copy of the memory stick’s data storage, only 70% of the
+original storage space is collected. In order to check if a human or software error was the cause of
+this, another imaging tool could be used and the results compared. If there is a deviation between
+the results, further analysis will be needed to understand the root cause. In cases where dual-tool
+verification is conducted, tools from different vendors or organizations should be used to avoid any
+common vendor weaknesses or interference between the tools’ capabilities. Dual-tool verification
+can be valuable in all phases of the digital forensics process, not just in the collection phase.
+8. Remote Acquisition
+Physical collection is not always feasible as it often requires traveling to a location to identify and
+collect devices of interest, such as the hard drives of a set of computers. Remote forensic
+acquisition can increase the speed of the investigation and reduce expenses. Furthermore, the more
+time it takes to arrive on-site and begin the collection, the more data may be lost. In case of data
+stored in cloud services, it may not be practically feasible or even possible for an investigator to
+enter a data center. There are several important considerations that are worth noting, including:
+ To enable remote acquisition, software will have to be installed on devices or systems to
+support remote acquisition.
+ Data must be transmitted over a network, which can breach confidentiality, integrity, and
+availability.
+ Trust is reduced as we are not in possession of the physical device and a complete
+collection of data may be infeasible.
+ It is dependent upon the hardware of the device as tools are running on the IT.
+Many forensic software vendors include remote forensics capabilities in their tools, such as
+Guidance Software (EnCase), Accessdata (FTK), and FireEye. An investigator can also collect data
+by secure shell access (SSH) or Powershell. These tools along with an incident response capability
+in an IT security department of a company provide quicker response times to initiate forensic
+analysis of devices in remote locations. Remote acquisition can also be applicable in cases where
+
+you have physical possession of the device of interest. Remote forensics laboratory tools can
+transmit binary copies of collected data from one device to another. Netcat is one tool that is often
+used for this purpose. Data should be hashed before it is sent over a network, to verify the evidence
+integrity when it is received and to support the chain of custody. Most people who use the web
+today use cloud services. These can be common email services, file storage services, social media
+(such as Facebook and Twitter), and corporate services hosted online in locations far removed from
+the users. The legal aspects of cloud services investigations are complex and can restrict access to
+potential evidence. Service providers may provide their services from foreign physical locations
+that are subject to laws of countries other than the one where the actual crime is believed to
+originate from.
+9. External Competency and Forensics Cooperation In global or multinational criminal cases,
+the involvement of forensics units in other countries can be necessary to solve a case. The Internet
+poses a unique challenge for digital forensics investigations. Cybercrime is one type of crime that
+can rarely be solved by police investigators from only one country, as the origin of the attack can
+be in one country, but the crime has an effect in another country. Arenas for global cooperation
+include Interpol, Europol, Eurojust, the G8 Subgroup on High Tech Crime, as well as bilateral and
+multilateral relations.
+In the case of SpyEye, many national law enforcement agencies were involved from all around
+the world. In addition, commercial security companies were part of the investigation of the
+malware and evidence identified on compromised machines and servers.
+
+Examination Phase
+All data collected must be examined and prepared for later analysis as part of the examination
+phase. As with all phases in the digital forensics process, it is important to document your
+actions and handling of the data to support the chain of custody. The examination often
+requires restructuring, parsing, and preprocessing of raw data to make it understandable for a
+forensic investigator in the upcoming analysis. To facilitate this phase, an analyst typically uses
+forensic tools and techniques appropriate for extracting relevant information. As stated in
+ISO/IEC 27041:2015 (ISO/IEC, 2015a), we are attempting to “retrieve relevant potential
+digital evidence from one or more sources.”
+Definition 2.6: The Examination Phase Preparation and extraction of potential digital
+evidence from collected data sources
+
+2.4.1 Initial Data Source Examination and Preprocessing A copy of the data source can be
+considered a “black box” of unstructured, binary data. The objective of the initial, basic
+examination of the data is to make it more structured and readable. Digital forensics tools
+automate much of these preliminary examination and preprocessing tasks. This reduces the
+manual task load for the investigator, and reduces the likelihood of mistakes, such as
+overlooking essential evidence or damaging it. However, the value of manual examination
+should not be underestimated, as algorithms cannot necessarily substitute for the intuition of an
+experienced forensic investigator. As the data loads increase exponentially with Moore’s law,
+triage has become an increasingly important part of digital forensics. The analogy relates to the
+triage of patients, where treatment is prioritized based on the severity of the patient’s condition.
+With respect to digital forensics, triage is the process that aims to identify the most relevant
+data as quickly as possible. The purpose is to manage situations where one has a finite amount
+of time and resources to carry out an investigation. Digital forensic tools support this need, for
+example by extracting the most recently changed files from a computer.
+Another technique that can be useful for the initial examination is to use known case
+information to identify data of interest, such as malicious executable files or contraband image
+files. There are typical web and Internet activity characteristics that can prove fruitful for an
+investigation, such as email for communication, cached websites, bookmarks, and cookie files
+for web activity. In general, the more the examination phase can structure and organize the data
+for the investigators, the better the overview will be for later analysis of the actual content of
+the data objects. File hashes can be used to identify files that you are searching for, such as
+known images (e.g., contraband images) or known documents. A similar example for targeted
+examination is to use a known keyword database to search for suspicious activity in general or
+for the specific case in question. Forensic tools generally add metadata to each digital object,
+including references to databases with known hashes and key words. The added metadata is
+stored in common forensic file formats and can be used during further examination of the
+evidence.
+2.4.2 Forensic File Formats and Structures Many digital forensics toolkits and software
+suites come with their own file formats or databases to store information that has been
+collected in a structured manner. The forensic format used can have an impact on the
+effectiveness of the forensic analysis. It is important that the formatting of the copied data
+clearly reflects the evidence tied to the incident investigated and provides as much additional
+information as possible. There are many different digital forensics formats, and the information
+storage capabilities of these formats have different impacts on the investigation results. First
+and foremost is the raw data format, which is used to copy the data source “as is.” The more
+extensive storage formats are EnCase, SMART, AFF, and Prodiscover. The latter formats add
+more information and flexibility to the extracted and examined data; this serves to improve
+subsequent analysis. Examples of such additional information include metadata extractions,
+integrity checks, archive decompressions, and file decryptions. In cases where huge volumes of
+data are being copied for the investigation, examination can be difficult, and it is sometimes
+impossible to analyze the data in one single image file. Because of this limitation, some
+forensic file formats support splitting of image files, so that they can more easily be shared. If
+such file formats are used, one needs to ensure that image splitting doesn’t affect the integrity
+of the data. Forensic file formats typically support the most common data sources, such as
+block devices, hard disk images, and computer memory. However, not all formats support all
+file systems.
+3 Data Recovery Most computer systems, digital devices, and file systems are typically
+designed to treat information in the most efficient way to enhance performance and the user
+experience. As a result, they are not designed to securely wipe or destroy data upon request. In
+most modern file systems, only the pointer to the file is marked “available” or “unallocated.”
+These results in the space being available and a new file can overwrite the previous file. Data
+can thus be recovered from the storage area even after deletion of a file, as long as the data area
+was not overwritten. For example, if an image were deleted years prior to an investigation,
+parts of the image might still be extracted. The image data can be rebuilt in a viewer, and it will
+represent the original material and its content, even though other details or portions of the data
+
+are missing. In cases of deleted files, it is essential to carefully document traceability to the
+original data source, since methods used for examination may change the state of data. These
+actions need to be documented to maintain evidence integrity.
+2.4.4 Data Reduction and Filtering Large amounts of data present a challenge for effective
+digital forensics investigations. A single digital device may hold terabytes of data from billions
+of files. All methods for safely reducing the data volume should be considered. Filtering is an
+example of a method that can be used during examination. A well-known filtering or hash
+lookup technique is based on databases with cryptographic hash values from known files.
+Many files in a computer belong to the operating system, software, and other applications.
+These files usually do not contain any useful evidence, and they can safely be ignored in the
+examination/analysis. The use of known file databases, in combination with digital forensic
+tools, makes it possible to improve the understanding of files that are known to be good or
+simply to filter them out if considered useless. There are two categories of known files: known
+bad files and known good files. Known bad hash databases can also be used to identify
+suspicious files like malware and rootkits as well as images known to be associated with
+criminal activities. The National Software Reference Library is an example of a library that
+provides datasets of known good files that can be used to filter out operating system files,
+application files, and more, leaving only files of interest for further analysis. Figure 2.13 shows
+how known good files might be removed to reduce the total amount of data.
+
+5 Timestamps A systems internal clock should always be noted, as should any deviations in
+time zones or suspicions of incorrect system clocks. The recording of correct timestamps in an
+investigation can help identify correlations across multiple data objects. In addition,
+adjustments have to be made if the clock of one digital device is off and not synchronized
+relative to accurate time sources. The investigator also needs to know whether the forensic tool
+being used will display and support different time zone settings, and how these relate to local
+machine times and UTC (coordinated universal time).
+2.4.6 Compression, Encryption and Obfuscation During the examination phase, compressed
+files should be uncompressed, and encrypted files should be decrypted if possible. Compressed
+files are not necessarily difficult to handle as long as one knows the compression algorithm and
+has tools to decompress the file. If proprietary compression algorithms are in use, it can be
+more difficult and time-consuming to uncompress the data. It can also be that obscurity
+techniques have been applied to complicate the identification of potential evidence. If pictures
+or executable files are renamed and their extensions are changed to appear as text documents,
+they need to be preprocessed before the upcoming analysis. Many tools support file type
+extension matching to detect if a file is what its extension claims it to be. Encryption can be
+used by corporations to secure their assets, by individuals for privacy protection, and by
+criminals for anti-forensics. The encryption algorithm, key format, and length used may make
+the examination of encrypted data simple, complex, or even impossible to accomplish within a
+reasonable period of time and scope of resources. The increasing use of encryption and
+obfuscation techniques is starting to become a serious challenge in digital forensics. To help
+the forensic investigator, some forensic toolkits have built-in capabilities to crack passwords,
+like the support for rainbow tables in the FTK toolkit. Steganography is a method for
+concealing a hidden message, image, or other information in another file, message, image, or
+video. For example, in digital pictures it is possible to store textual information in “hidden
+
+layers” not visible to the eye or to typical photo applications such as MS Paint. Special tools
+exist to make this possible, such as DeepSound, which is a tool to conceal information in audio
+or music files. The benefit of using steganography over encryption is that it does not attract
+attention. This introduces an additional complexity for digital forensics.
+2.4.7 Data and File Carving
+When data is collected from a data source, a forensic investigator may find it unstructured and
+difficult to interpret. One might view files, such as photos and documents, with a computer
+browser, but a collected data image can contain broken files, deleted files, scattered data
+elements, and objects that stem from many years of using a computer or handheld digital
+device. In order not to overlook potential evidence, there are tools and techniques available for
+parsing or carving unstructured and sometimes raw binary data, as illustrated in Figure 2.15,
+based on a similar presentation in Richard and Roussev (2005). Media file parsers use
+techniques to identify patterns or signatures associated with particular file formats and types.
+Most file types contain headers and footers that make them readable to the applications
+handling them; these applications render the file as intended for use by the user. The use of
+carving tools allows forensic examiners to select a set of file types to recover from a piece of
+media. Media carving can be quite useful in order to acquire deleted files such as previously
+deleted images. Other parsers are useful for examining one of the most common electronic
+communication protocols: email. Email parsers can crawl through the raw data copied from a
+digital device and render individual emails in a manner that makes it easier to analyze them in
+later phases of an investigation. The parsing of standard, well-known file types is one thing; the
+parsing of proprietary files and objects is a different matter. More manual work is required to
+examine the information contained within the files and to ensure that they can be presented in a
+format that is as readable as possible for a forensic analyst.
+
+8 Automation Automation is an objective in itself during the examination phase, for reasons of
+both forensic soundness and efficiency. Most of the tasks in the examination phase can be
+automated using scripts or programs. File parsing, string searches, and extraction of
+compressed files will significantly reduce the manual task load on an investigator, in particular
+when working with large datasets. The most common digital forensic tools, such as EnCase,
+offer special-purpose scripting languages to help automate tasks.
+Presentation Phase
+The presentation phase involves the final documentation and presentation of the results of the
+investigation to a court of law or other applicable audiences, such as a corporation’s top
+management or crisis management team. The presentation is based on objective findings with a
+
+sufficient level of certainty, based on the analysis of digital evidence. It is important that the
+findings are summarized and that all actions performed during the investigation are accounted
+for and described in a fashion understandable by the audience
+Definition 2.8: The Presentation Phase The process by which the examiner shares results
+from the analysis phase in the form of reports to the interested party or parties.
+
+1 The Final Reports You might think all the work has been completed. The evidence is “in
+your hands” and is ready to put the suspect behind bars. But there is one thing left to do –
+prepare the final report. As we can see from the digital forensics process, chain of custody and
+evidence integrity rely on thorough documentation of all actions taken from the time you arrive
+“at the scene” until the results are presented to the relevant authority. To wrap it up, the final
+report should include all relevant case management information. The report describes the
+context and background of what has been done, who has conducted the investigation, and what
+was investigated. Typical information required in a final report is:
+ roles and tasks assigned for the investigation;
+ executive summary of all information sources and evidence;
+ the forensic acquisition and analysis, which reflect chain of custody and evidence
+integrity;
+ visualizations and diagrams;
+ images and screenshots;
+ information that supports repeatability or reproducibility of the analysis;
+ tools used; and
+ Findings.
+Many digital forensics tools have reporting functionality that documents and summarizes all
+the interactions that have been carried out. This alone is not enough, especially since you may
+have used a variety of tools, manual tasks, and analyses during the process. This means that the
+investigator must be able to prepare this information so that it is understandable to a third
+party. Ultimately, this is the purpose of the investigation: to present the findings in a clear and
+understandable manner. It is also important for the report to sufficiently document
+reproducibility. Given your report of the methods used and the same evidence, a skilled third
+party should, in principle, be able to reproduce the findings. An example report generated by
+the digital forensic analysis tool Autopsy is shown in Figure 2.21.The preparation of the final
+report can be timeconsuming, especially for large and long-lasting investigation.
+2 Presentation of Evidence and Work Conducted A wall of text is no good for anyone. As
+we saw from the analysis phase of the digital forensics process, visualization techniques are
+valuable in order to identify patterns and information that are not immediately obvious.
+Presenting the final report professionally and in a format that is rich with visual aids will make
+the complex and unstructured information available in an easy and understandable way. The
+reader will not have the skills required to understand all the technical tasks conducted or the
+technical details about the evidence. Diagrams, graphics, and timelines are powerful tools to
+make the findings more accessible.
+
+2.6.3 The Chain of Custody Circle Closes The documented chain of custody is the glue that
+holds the forensics process together and supports the final evidence integrity so that it can be
+presented as trustworthy evidence in court. If you have not documented all activities, a court
+could claim that a critical task did not occur. No matter how carefully the work has been
+completed, an inability to document the chain of custody for all phases could compromise the
+trust in the authenticity and integrity of the evidence in court. The documentation made
+throughout the digital forensics investigation, together with recommendations and expert
+testimony, will form the final presentation. The evidence and methods used to find it are
+presented to a court of law or to a corporate audience.
+Digital Forensics Process
+The phases, principles applied, and techniques are used in the digital forensics investigation
+process. Understanding the digital scene of the incident, as well as the physical scene, has shown
+to be crucial for the digital forensics process. The people applying the processes and the
+technology supporting them are also fundamental aspects of forensically sound investigations.
+Examples and scenarios have been presented to emphasize the relevance and importance of
+having a process to structure the work conducted and the results presented. Cybercrime has over
+the last decade evolved and continues to do so. As digitalization is all-encompassing and the
+Internet is available to law-abiding actors as well as criminal actors, digital forensics has become
+a central part of nearly any type of incident response or crime investigation. The forensic process
+can help us to conduct common tasks in any forensic investigation and to reduce the number of
+errors and mistakes made. This reduces the likelihood of criminals succeeding by manipulating
+digital evidence. A common understanding of digital forensics terms and definitions helps us
+establish a common platform that defines what actions are carried out on what data in each phase
+in the forensics process. Because of this, we chose to define the most frequently applied terms
+with respect to standards and best practices within the digital forensics field. In addition, the
+forensic principles of chain of custody and evidence integrity, due to their importance in digital
+evidence. In summary, the digital forensics process is a five-phase process, based on common
+processes in the field. It comes with subphases and activities that can be applied for any digital
+investigation: civil, criminal, or corporate. The phases are summarized as follows:
+ Identification: Verification of event, incident, or crime.
+ Collection: Evidence collection and acquisition of data.
+ Examination: Preparation and examination of data and potential evidence.
+
+ Analysis: Use of scientific methods to determine the facts about an incident or crime (if
+any) and the significance of the evidence.
+ Presentation: Documentation and reporting of evidence found.
+The digital forensic process is a normative approach of conducting digital forensics investigations. It
+is primarily grounded on a traditional physical forensics investigation process and includes all
+required phases. These phases include the original notification, through the reporting to the final
+presentation of the findings. It is important to act according to a defined process in order to identify
+digital objects reflecting the facts of interest in criminal or civil courts of law. It is also important for
+corporate and private investigations to verify the impact of an incident, in order to know whether there
+were serious breaches, such as loss of confidential data. In this way, the process can be considered as
+a part of a quality assurance system for digital forensics. The process is split into five consecutive, but
+also iterative phases, which we will focus on in this section. The first phase is the identification of
+potential evidence sources from digital devices. Then, we collect digital raw data by copying the
+source in a forensically sound manner. Next, we examine the raw data, giving it structure so it is
+easier to process and understand. Then we conduct the analysis, where we seek to gain a better
+understanding and to identify digital objects that would ideally be the evidence that is, finally,
+presented to a court of law or the entity of interest. The process is described as a step-bystep process
+from start to end, but there can and will be multiple iterations of several phases. The process is
+illustrated in Figure 2.1
+
+Typically, the digital forensics process begins with an observation, alert, or notification of an event or
+an incident related to a crime. Based on this, a hypothesis about the event or incident is made and the
+investigation process is initiated. The most well-known processes have been analysed in order to
+identify their common characteristics and phases. Typical characteristics of a digital forensics
+investigation process have been summarized as follows:
+ Adhere to the leading practice and theory from traditional forensic investigations.
+ Be easily adaptable and practically oriented, and support traditional investigation steps.
+ Remain independent of technology, product, and procedure.
+ Applicable to law enforcement, corporate, and incident investigations.
+ Support forensic reconstructions.
+ Improve proper and efficient identification of facts.
+ Limit unnecessary generation of new artifacts.
+ Use and support forensic science and technology, and the results must be usable in a court of
+law.
+ Must be capable of being scrutinized by the judiciary if the case is presented in court.
+To illustrate the iterative aspect of the process, let us consider a case where we have identified
+multiple potential evidence sources. For example: we have seized a computer with multiple hard
+drives from one suspect of a crime, a mobile handset owned by another suspect, an online file share
+account, and the victim’s mp3 player. In this case, one would have to reiterate the process phases for
+
+each potential evidence source. Each source will be collected and examined. The analysis for each
+potential evidence source may be conducted one at a time, but often the data is analysed
+simultaneously from several of the collected sources. This occurs since there may be correlating
+events on the multiple devices that together form the final evidence to be presented in court.
+There are multiple challenges to the forensics process and principles need to be accounted for
+through the utilization of tools, processes, and digital forensics research. Adaptation of new
+technology, ways to communicate online, use of the Internet, shared services, cloud services, the
+Internet of Things, and big data, together with all the heterogeneous devices, platforms, and
+technology available, make digital forensics a highly complex undertaking. Immense amounts of data
+will challenge the effectiveness of forensic analysis.

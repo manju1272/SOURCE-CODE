@@ -1,0 +1,740 @@
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+UNIT-1: INTRODUCTION TO ETHICS OF AI
+
+Role of Artificial Intelligence in Human Life, Understanding Ethics, Why
+Ethics in AI? Ethical Considerations of AI, Current Initiatives in AI and Ethics,
+Ethical Issues with our relationship with artificial Entities
+1.Role of Artificial Intelligence in Human Life:
+Artificial Intelligence is the possession of simulated human intelligence by
+machines, it is synonymous to machine intelligence. It is programmed and
+designed by developers and it can act and think like a human. AI becomes one of
+the important parts of daily life.
+In a wide area of day-to-day services, AI technology is used. This technology
+reduces the human effort. People are using this technology in many industries to
+develop autonomous robots for performing various activities. The machine can
+increase the speed of work and process and give an accurate result.
+AI technology is spreading wide across all the fields, to reduce the efforts of
+humans and provide optimised results. This blog will help you know the
+importance of Artificial intelligence in our daily lives. Artificial Intelligence
+Course helps you to attain a deeper understanding and necessary skills in the field
+of Artificial Intelligence.
+The role of Artificial Intelligence in day-to-day life falls under two categories.
+They are,
+
+
+Artificial Intelligence in Software
+
+
+
+Embodied Artificial Intelligence
+
+1.1 Artificial Intelligence in Software
+Artificial Intelligence software is a computer program designed to mimic human
+actions and does not require any peripheral devices to perform. Software with
+Artificial Intelligence can be downloaded from any online store and can be
+installed on the existing device. They help in making the daily routine much
+
+1
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+simpler than before. The importance of Artificial Intelligence Software is of four
+types in the industry. They are,
+
+
+Artificial Intelligence Platforms have built-in algorithms to provide space
+to build an application from the scratch.
+
+
+
+Chatbots helps in providing active conversations imitating humans‟
+response.
+
+
+
+Deep Learning Software offers image recognition, speech recognition,
+etc.
+
+
+
+Machine Learning Software helps the computer learn through the data
+and work accordingly.
+
+Artificial Intelligence is an interesting area of field to explore and expand your
+knowledge. With the growing science and technology in human life, there could
+be twice a huge job vacancy in the field. Make the right choice and join Artificial
+Intelligence Course in Chennai to build a successful career!
+Voice Assistants
+AI backs up the voice assistants like Google Home, Siri, Cortona, and Alexa to
+decode the voice commands of their masters. AI also helps these applications to
+take up the databases from the cloud storage platforms to give back the tailored
+search engine results. Voice assistants are also deployed in healthcare to detect
+diseases through vocal biomarkers. In telehealth applications, voice-based chat
+boxes are made available for screening and classifying.
+Face detection
+Face detection is one of the most popular uses of Artificial Intelligence in our
+daily life. It uses the Image Processing technology of Artificial Intelligence to
+identify faces with the help of distance between two eyes, shape of the face,
+edges, and other features. This face ID unlock feature is commonly seen in the
+smartphones of today.
+Face recognition software is using Generative Adversarial Neural Networks
+(GANN) to lower the margin of error. These neural networks are also being
+honed to detect fraudulent use of Deepfake technology. AI software, that detects
+2
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+facial expressions to determine mood and intent is also being developed by
+several sectors. Emotion AI or Affective Computing is a growing field of study
+for assessing client satisfaction.
+Financial and Banking Sector
+In Banking, Financial Services and Insurance(BFSI) Sector the AI technology is
+used to handle the numerous activities like the investment in stocks, financial
+operations, and much more. The AI technology can help the bank to provide
+better services to the customer and give them hassle-free banking
+solutions. Chatbots provide a strong return on investment in terms of cost
+reductions, making them one of the most widely deployed AI applications across
+industries.
+Personalized Marketing
+To increase engagement, brands use AI-driven personalization solutions based on
+customer data. According to aOneSpot Research report, 88 percent of surveyed
+consumers believe that more personalized content makes them feel better about a
+brand.
+Recent AI innovations claim to use computer vision to predict the performance of
+an advertisement, assisting brands in reaching the right people and serving those
+who require those products. Learn the inner play of marketing by joining
+the Digital Marketing Course in Chennai and be the wolf in the marketing
+department. Depending on the marketing stage, AI marketing apps can assist both
+prospects and retargeted customers. Artificial Intelligence is used with
+Augmented (AU) Reality for the customers to choose from the wide range of
+product collections of an online shopping website or the store itself.
+Healthcare
+In the Medical Science sector, AI technology is used in the number of
+applications and gives an incredible value. AI technology is used for analytics,
+research and also used to develop a personal health care assistant. Bots are
+developed to give support to customers. It is used in a hospital for scheduling an
+appointment with 24/7 assistance. Image Processing in Artificial
+Intelligence helps in X-ray Imaging, PET Scans, UV Imaging, Medical CT,
+Cancer Cell Image Processing, and much more.
+3
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+Heavy Industries
+In Heavy Industries AI is widely used in the production units. They are designed
+as a robot to carry out specific tasks autonomously. They can displace the
+materials from one place to another, without a reduction in the efficiency of the
+machines.
+Not only in the production they are also used in the planning phase to manage
+stocks, raw materials and inventories. Using AI technology in the big industry can
+help them to complete their tasks on time and help them to generate more profits
+in businesses.
+Cyber Security
+The major role of Artificial Intelligence is that it can improve cyber security
+systems. It performs by leveraging data from previous threats and learning
+patterns and indicators that appear to predict and prevent attacks. In addition to
+preventing external threats, AI can monitor internal threats or breaches and
+recommend corrective actions, resulting in data theft or abuse prevention.
+AI-based cyber security systems can provide the most up-to-date knowledge of
+global and industry-specific threats, allowing you to make more informed
+prioritization decisions based not just on what could be used to attack your
+systems, but also on what is most likely to be used to attack your systems.
+Air Transport
+Artificial Intelligence in Air ways is used for fuel efficiency optimization. The
+deployed AI systems with Machine Learning algorithms collect and analyze flight
+data such as aircraft type and weight, route distance and altitudes, weather, and so
+on. These data help in estimating the optimal amount of fuel needed for the
+flight.
+Many airlines improve their customer service with AI-powered chatbots that
+assist passengers with flight booking and management, baggage tracking,
+answering questions, and other types of assistance.
+Gaming and Entertainment
+The importance of Artificial Intelligence in streaming apps is that they
+recommend custom content based on the user‟s interaction with various media.
+4
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+These apps create catalogues of music, movies, and TV shows tailored to each
+individual user‟s preferences by using AI to parse through ever-increasing user
+data.
+Innovations in gaming Artificial Intelligence has concentrated on giving more
+interesting challenges to the gamer rather than assessing the gamers‟ mindset.
+Some of these gaming applications use Virtual Reality (VR) headsets to provide
+Cognitive Behavioural Therapy (CBT) for better engagement with the person. As
+the game progresses, AI assists these games in adapting to the user‟s behaviour
+based on examined stimuli.
+Navigation and Travel
+The Artificial Intelligence programmers‟ work behind navigation apps like Waze
+and Google Maps never ends. The digital maps are created based on geographical
+images provided by the satellite. The importance of Artificial Intelligence is that
+with the use of predictive models, it assists in determining paths on satellite
+photos covered by natural overgrowth. Regular route changes have been made
+easier because of the imaging methods based on Convolutional Neural Networks
+(CNN) and Graph Neural Networks (GNN).
+Security and Surveillance
+It is practically hard for a human to keep a continual check on many CCTV
+network monitors at the same time. As a result, we‟ve felt compelled to automate
+such monitoring operations and improve them using machine learning
+approaches.
+Artificial Intelligence frees up human surveillants to focus on verifying and
+responding to critical situations. AI video monitoring software handles the
+ongoing monitoring and detection aspect of surveillance. You could ask, Why do
+we need Artificial Intelligence if humans could perform the same task
+effortlessly? The reason is Artificial intelligence can detect abnormal activity that
+human eyes may overlook.
+Surveillance systems in high-risk public venues, such as government buildings,
+use an extension of AI-based facial recognition software. At the moment, liberal
+
+5
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+governments are attempting to mitigate the possibility of privacy breaches as a
+result of AI spies.
+
+Embodied Artificial Intelligence
+Embodied Artificial Intelligence is the hardware created for installing Al to
+mimic human actions and to work on automation. Thus, Embodied Artificial
+Intelligence entails the creation of specific devices with AI capabilities. They
+move through the physical world and affect it with their actions just like a human
+would do. The hardware with AI can be seen in Self-driven cars, drones, etc.
+Self-Driven Vehicles
+Autonomous Vehicle Technology with AI innovation is taking place as a result of
+worldwide corporate interest. Beyond cruise control and blind-spot detection, AI
+is advancing to fully autonomous capabilities.
+Vehicles are being taught to run independently using Deep Reinforcement
+Learning (DRL), a form of machine learning. The role of Artificial Intelligence is
+to make predictions in planning the route with possible static and dynamic
+impediments.
+It swerves corresponding to the neighbouring vehicles and other unforeseeable
+circumstances. Simultaneous Localization and Mapping (SLAM) technology
+enables this with real-time sensor-based orientation to the environment.
+Internet of Things (IoT)
+The convergence of AI and the Internet of Things (IoT) creates a plethora of
+opportunities for developing smarter home appliances that operate with minimal
+human intervention. While IoT is concerned with devices interacting with the
+internet, AI assists these devices in learning from data.
+Artificial Intelligence is important in unlocking the power of data collected by
+IoT devices via sensors. Learning‟s from this data over multiple iterations
+improve the ability of IoT devices to respond to human stimuli and requirements.
+
+6
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+Artificial Intelligence is the backbone of tremendous technological growth. The
+role of Artificial Intelligence is crucial in today‟s world as it has already mended
+the daily life of commoners with it. Artificial Intelligence could be a lucrative
+field in the future with booming job opportunities.
+
+2. Understanding Ethics:
+What is AI ethics?
+Intended audience and existing government guidance The following
+guidance is designed to outline values, principles, and guidelines to assist department
+and delivery leads in ensuring that they develop and deploy AI ethically, safely, and
+responsibly. It is designed to complement and supplement the Data Ethics
+Framework. The Data Ethics Framework is a practical tool that should be used in any
+project initiation phase. AI ethics a remarkable time of human promise has been
+ushered in by the convergence of the ever-expanding availability of big data, the
+soaring speed and stretch of cloud computing platforms, and the advancement of
+increasingly sophisticated machine learning algorithms. This brave new digitally
+interconnected world is delivering rapid gains in the power of AI to better society.
+Innovations in AI are already dramatically improving the provision of essential social
+goods and services from healthcare, education, and transportation to food supply,
+energy, and environmental management. These bounties are, in fact, likely just the
+start. Because AI and machine learning systems organically improve with the
+enlargement of access to data and the growth of computing power, they will only
+become more effective and useful as the information age continues to develop apace.
+It may not be long before AI technologies become gatekeepers for the advancement
+of vital public interests and sustainable human development. This prospect that
+progress in AI will help humanity to confront some of its most urgent challenges is
+exciting, but legitimate worries still abound. As with any new and rapidly evolving
+technology, a steep learning curve means that mistakes and miscalculations will be
+made and that both unanticipated and harmful impacts will inevitably occur. AI is no
+exception. In order to manage these impacts responsibly and to direct the
+development of AI systems toward optimal public benefit, you will have to make
+7
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+considerations of AI ethics and safety a first priority. This will involve integrating
+considerations of the social and ethical implications of the design and use of AI
+systems into every stage of the delivery of your AI project. It will also involve a
+collaborative effort between the data scientists, product managers, data engineers,
+domain experts, and delivery managers on your team to align the development of
+artificial intelligence technologies with ethical values and principles that safeguard
+and promote the wellbeing of the communities that these technologies affect. By
+including a primer on AI ethics with the Guide, we are providing you with the
+conceptual resources and practical tools that will enable you to steward the
+responsible design and implementation of AI projects.
+These values, principles, and techniques are intended both to motivate morally
+acceptable practices and to prescribe the basic duties and obligations necessary to
+produce ethical, fair, and safe AI applications.
+Why AI ethics? The field of AI ethics has largely emerged as a response to the
+range of individual and societal harms that the misuse, abuse, poor design, or
+negative unintended consequences of AI systems may cause. As a way to orient you
+to the importance of building a robust culture of AI ethics, here is a table that
+represents some of the most consequential forms that these potential harms may take:
+2.1Potential Harms Caused by AI
+Systems Bias and Discrimination
+Because they gain their insights from the existing structures and dynamics of the
+societies they analyse, data driven technologies can reproduce, reinforce, and amplify
+the patterns of marginalisation, inequality, and discrimination that exist in these
+societies. Likewise, because many of the features, metrics, and analytic structures of
+the models that enable data mining are chosen by their designers, these technologies
+can potentially replicate their designers‟ preconceptions and biases. Finally, the data
+samples used to train and test algorithmic systems can often be insufficiently
+representative of the populations from which they are drawing inferences. This
+creates real possibilities of biased and discriminatory outcomes, because the data
+being fed into the systems is flawed from the start.
+
+8
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+Denial of Individual Autonomy, Recourse, and Rights
+When citizens are subject to decisions, predictions, or classifications produced by AI
+systems, situations may arise where such individuals are unable to hold directly
+accountable the parties responsible for these outcomes. AI systems automate
+cognitive functions that were previously attributable exclusively to accountable
+human agents. This can complicate the designation of responsibility in
+algorithmically generated outcomes, because the complex and distributed character
+of the design, production, and implementation processes of AI systems may make it
+difficult to pinpoint accountable parties. In cases of injury or negative consequence,
+such an accountability gap may harm the autonomy and violate the rights of the
+affected individuals.
+Non-transparent, Unexplainable, or Unjustifiable
+Outcomes many machine learning models generate their results by operating on high
+dimensional correlations that are beyond the interpretive capabilities of human scale
+reasoning. In these cases, the rationale of algorithmically produced outcomes that
+directly affect decision subjects remains opaque to those subjects. While in some use
+cases, this lack of explainability may be acceptable, in some applications, where the
+processed data could understanding Artificial Intelligence Ethics and Safety 5
+harbour traces of discrimination, bias, inequity, or unfairness, the opaqueness of the
+model may be deeply problematic.
+2.1 Invasions of Privacy
+Threats to privacy are posed by AI systems both as a result of their design and
+development processes, and as a result of their deployment. As AI projects are
+anchored in the structuring and processing of data, the development of AI
+technologies will frequently involve the utilisation of personal data. This data is
+sometimes captured and extracted without gaining the proper consent of the data
+subject or is handled in a way that reveals (or places under risk the revelation of)
+personal information. On the deployment end, AI systems that target, profile, or
+nudge data subjects without their knowledge or consent could in some circumstances
+be interpreted as infringing upon their ability to lead a private life in which they are
+able to intentionally manage the transformative effects of the technologies that
+9
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+influence and shape their development. This sort of privacy invasion can
+consequently harm a person‟s more basic right to pursue their goals and life plans
+free from unchosen influence.
+Isolation and Disintegration of Social Connection
+While the capacity of AI systems to curate individual experiences and to personalise
+digital services holds the promise of vastly improving consumer life and service
+delivery, this benefit also comes with potential risks. Excessive automation, for
+example, might reduce the need for human-to-human interaction, while
+algorithmically enabled hyper-personalisation, by limiting our exposure to
+worldviews different from ours, might polarise social relationships. Well-ordered and
+cohesive societies are built on relations of trust, empathy, and mutual understanding.
+As AI technologies become more prevalent, it is important that these relations be
+preserved.
+Unreliable, Unsafe, or Poor-QualityOutcomes
+Irresponsible data management, negligent design and production processes,
+and questionable deployment practices can, each in their own ways, lead to the
+implementation and distribution of AI systems that produce unreliable, unsafe, or
+poor-quality outcomes. These outcomes can do direct damage to the wellbeing of
+individual persons and the public welfare. They can also undermine public trust in
+the responsible use of societally beneficial AI technologies, and they can create
+harmful inefficiencies by virtue of the dedication of limited public resources to
+inefficient or even detrimental AI technologies.
+3.Why Ethics in AI? Why Now?
+We have a question of how to develop codes of ethics in artificial intelligence.
+But why look at this now? Hardly a day goes by when there is not a prominent media
+story about the risks and benefits of artificial intelligence. Alongside accounts of the
+technological promise of AI are warnings about its perils. Even those who herald a
+glorious future with AI often paint a picture of profound social and individual
+change. But should we be worried? And if so, what should be we worried about in
+particular? And precisely how worried should we be? For one obvious feature of AI
+10
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+is its broad nature and manifold applications. There is also some problem even in
+defining it, for it‟s often been observed that a technological capacity is heralded as AI
+until it‟s in place, then, as John McCarthy, the computer scientist who coined the
+term „artificial intelligence‟, put it, „as soon as it works, no one calls it AI anymore‟
+(Vardi 2012). The borderline between what counts as AI proper and other forms of
+technology can be blurred. Some AI systems are so embedded within technology that
+they are assumed and almost invisible. This also means that it‟s hard or impossible in
+many cases to say which ethical and other value issues are presented by AI per se,
+and which by other features of technology. AI is already with us; many applications
+are fast developing and will be with us in the near to medium term. It is a disputed
+question when other even more advanced forms of AI including superintelligence
+will be here, if ever. Many consider that the emergence of super intelligence is an
+inevitability; there are the usual disputes about how long it will be before it is with
+us, as well as disputes about whether we should welcome its arrival, and if so, why.
+Philosophical and technical disputes converge, in the debates about whether we will
+ever develop AI which has consciousness and which is sufficiently complex, and in
+the right ways, to merit our moral concerns and protection. AI may involve robotics
+of varying complexity; it may involve the manipulation of vast amounts of data; it
+may involve machine learning. It may involve how we relate to others; it may
+involve how as individuals we think, remember and reason. It may have implications
+for the organisation of the labour market; it may involve how we trade; who has
+access to information; and how. It has implications for the economy, for politics, for
+culture. It has implications for those who directly use AI, such as those who use a
+robot butler; it has implications for those more remote, as for example when an
+algorithm developed by machine learning helps makes public policy decisions, or
+unemployment attributable to the use of AI means a worker can no longer afford to
+pay their child‟s music teacher. Artificial intelligence may be applied in many very
+different areas, and in different ways within the same area. In medicine, AI may be
+involved in computerised diagnosis of individual patients, or in algorithms to analyse
+vast amounts of data from thousands or millions of patients to understand the nature
+of disease and health. It may be involved in patient consultations and even therapy
+sessions with online or robotic responses. Robotic assistance with surgery can
+involve AI, for complex and delicate operations. It may be involved in remote
+monitoring of health, in mobile technology that gives patients information about their
+11
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+own conditions. It may be involved in nursing and care, with robotic assistants or
+companions. Robots are being used to assist people with autism to develop social
+skills. Robotic pets are being developed to provide companionship and mental
+stimulation to patients with dementia. Robotic limbs are being developed, as well as
+devices to enable patients with locked in syndrome and other similar conditions to
+communicate. Machinery increasingly involves AI. Autopilots include elements of
+AI, and autonomous vehicles are imminently set for widespread use. The „internet of
+things‟ connects household gadgets and other items using AI. Commerce involves
+AI, from automated trading agents in the stock market, to algorithms which tailor
+online advertising or sort the prices of airline tickets, both for buyers and for sellers.
+The use of robotics in manufacturing is long established, and capabilities are
+increasing. AI is moving into performing work that previously required not just
+manual skills but intellectual skills, as in legal research and accounting. Teaching
+also faces inroads from AI. AI may even be used in creative endeavours, such in
+writing literature; it‟s already being used in the composition of music. There will
+hence be many different and complex debates to be had about the perils and benefits
+of AI and its applications. How then, should we think about developing any codes of
+ethics for AI?
+4. Ethical Considerations of AI:
+The legal and ethical issues that confront society due to Artificial Intelligence
+(AI) include privacy and surveillance, bias or discrimination, and potentially the
+philosophical challenge is the role of human judgment. Concerns about newer digital
+technologies becoming a new source of inaccuracy and data breaches have arisen as a
+result of its use. Mistakes in the procedure or protocol in the field of healthcare can
+have devastating consequences for the patient who is the victim of the error. Because
+patients come into contact with physicians at moments in their lives when they are
+most vulnerable, it is crucial to remember this.
+
+12
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+There is a continuous debate regarding whether AI “fits within existing legal
+categories or whether a new category with its special features and implications
+should be developed.” The application of AI in clinical practice has enormous
+promise to improve healthcare, but it also poses ethical issues that we must now
+address. To fully achieve the potential of AI in healthcare, four major ethical issues
+must be addressed:
+1. Informed consent to use data,
+2. Safety and transparency
+3. Algorithmic fairness and biases, and
+5. Data privacy are all important factors to consider
+Whether AI systems may be considered legal is not only a legal one but also a
+politically contentious one (Resolution of the European Parliament, 16 February
+2017). The aim is to help policymakers ensure that the moral demanding situations
+raised by enforcing AI in healthcare settings are tackled proactively. The limitation
+of algorithmic transparency is a concern that has dominated most legal discussions on
+artificial intelligence. The rise of AI in high-risk situations has increased the
+requirement for accountable, equitable, and transparent AI design and governance.
+The accessibility and comprehensibility of information are the two most important
+aspects of transparency. Information about the functionality of algorithms is
+frequently deliberately made difficult to obtain.Our capacity to trace culpability back
+to the maker or operator is allegedly threatened by machines that can operate by
+unfixed rules and learn new patterns of behaviour. The supposed “ever-widening”
+divide is a cause for alarm, as it threatens “both the moral framework of society and
+the foundation of the liability idea in law.” The use of AI may leave us without
+13
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+anyone to hold accountable for any sort of damage done. The extent of danger is
+unknown, and the use of machines will severely limit our ability to assign blame and
+take ownership of the decision-making Modern computing approaches can hide the
+thinking behind the output of an Artificial Intelligent System (AIS), making
+meaningful scrutiny impossible. Therefore, the technique through which an AIS
+generates its outputs is “opaque.” A procedure used by an AIS may be so
+sophisticated that for a non-technically trained clinical user, it is effectively
+concealed while remaining straightforward to understand for a techie skilled in that
+area of computer science.AISs, like IBM's Watson for oncology, are meant to support
+clinical users and hence directly influence clinical decision-making. The AIS would
+then evaluate the information and recommend the patient's care. The use of AI to
+assist clinicians in the future could change clinical decision-making and, if adopted,
+create new stakeholder dynamics. The future scenario of employing AIS to help
+clinicians could revolutionize clinical decision-making and, if embraced, create a
+new healthcare paradigm. Clinicians (including doctors, nurses, and other health
+professionals) have a stake in the safe roll-out of new technologies in the clinical
+setting.The scope of emerging ML-HCAs in terms of what they intend to achieve,
+how they might be built, and where they might be used is very broad. ML-HCAs
+range from entirely self-sufficient synthetic intelligence diabetic retinopathy
+prognosis in primary care settings, to non-self-sufficient death forecasts, to manual
+coverage and resource allocation (25). Researchers ought to describe how those
+outputs can be included in the research, along with predictions. This information is
+essential to setting up the cost of the scientific trial and guiding scientific research
+6. Current Initiatives in AI and Ethics
+There are so many initiatives currently underway concerning the ethical, social and
+legal aspects of AI that it would be a project in itself to list them all. Here I simply
+indicate examples of activities from across diverse categories. There are of course
+academics from different disciplinary approaches working across many universities,
+including dedicated centres, such as the Leverhulme Centre for the Future of
+Intelligence at Cambridge and the One Hundred Year Study of AI (AI100) at
+Stanford University. Such centres may get funding from a variety of sources. As well
+as projects explicitly examining ethical issues in AI, there are also AI projects which
+themselves incorporate ethical objectives. These projects show an awareness of the
+14
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+potential problems of AI. For example, OpenAI aims to produce open source AI code
+under the belief that this is the best way forward to combat possibly malicious use of
+AI. The Machine Intelligence Research Institute (MIRI) states its aim as „aligning
+advanced AI with human interests‟. Large and smaller corporations also have
+initiatives, such as the Partnership on Artificial Intelligence to Benefit People and
+Society, with collaboration from Amazon, Deep Mind, Facebook, Google, IBM, and
+Microsoft (https://www. partnershiponai.org/); and the non-profit initiative AI Austin
+with collaboration between university, City Council and business (https://www.aiaustin.org/). There‟s also work by individuals in the professions, such as research
+examining bias in AI recruitment and the development of apps to investigate bias in
+algorithms (Clark 2016). Work by government agencies is also underway, such as the
+White House Report on the Future of Artificial Intelligence (Executive Office of the
+President 2016) and a draft report on robotics and law by the Committee on Legal
+Affairs of the European Union (Directorate-General for Internal Policies 2016). Such
+governmental work tends to focus on wider societal issues such as employment,
+funding and economics, which naturally have ethical implications. There is work by
+professional bodies such as the IEEE‟s Standards Association Global Initiative for
+Ethical Considerations in the Design of Autonomous Systems, which has a large
+number of strands of investigation motivated by their by-line, „Values By Design.‟
+This is an ongoing project to produce both industry standards and discussion
+documents
+on
+various
+topics
+(http://standards.ieee.org/develop/
+indconn/ec/autonomous_systems.html). There‟s work by research funding councils
+such as the Engineering and Physical Science Research Council (EPSRC)‟s
+Principles of Robotics which was produced in 2011 and designed to stimulate
+discussion (Boden et al. 2011). There is also work by special interest and pressure
+groups from the Campaign to Stop Killer Robots, whose remit is obvious from the
+name (https://www. stopkillerrobots.org/), to the #HellNoBarbie campaign fighting
+against Hello 1.2 Current Initiatives in AI and Ethics 3 Barbie and other children‟s
+toys which can transmit and analyse children‟s conversations remotely (Taylor and
+Michael 2016). There are projects funded by non-profit organisations, such as our
+project, which is funded, along with 34 other projects, with an AI grant awarded by
+the Future of Life Institute. The Future of Life Institute held a 5 day workshop in
+January 2017 at Asilomar in California, during which time they drew up a set of
+Asilomar AI Principles.
+15
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+7 .Ethical Issues with our relationship with artificial Entities:
+This chapter is about the ethics of our relationships with artificial entities—
+bots, robots, and other computational systems created to interact with us as if they
+were sentient and autonomous individuals. They may be embodied as robots or exist
+only in software; some are clearly artificial while others are indistinguishable, at least
+under certain conditions, from human beings. When are such interactions helpful or
+harmful? How do our relationships with computational entities change our
+relationships with other human beings? When does it matter if we interact with a
+machine or a human, and why?
+There Are Three Ethical issues with our relationship with artificial Entities: They are
+1. Ethics of Our Relationship with the Seemingly Sentient.
+2. Ethics of Creating Seemingly Sentient Entities
+3. Sentient Entities as Social Mirror
+1. Ethics of Our Relationship with the Seemingly Sentient:
+The big-eyed, round-bodied artificial assistant that sits on our counter, playing
+music and telling jokes, seems disarmingly innocuous; if we think of it as having
+intentions, they are to please us. But when we imagine an actually sentient, conscious
+artificial being and its goals and intentions, the narrative tends to darken. To
+understand why, we need to turn to another mental quality—intelligence. Vernacular
+Western thought pictures the world as hierarchical, with humans on top due to our
+superior intelligence. This intelligence has given us fantastic power: we build
+bridges, cities, bombs, and transistors; we conquer nature with vaccines, dams, and
+insecticides. Our intelligence has given us power over all the other animals, which
+we have exploited without hesitation. But while our intelligence gives us the ability
+to do these things, it is our consciousness—our awareness of ourselves, our place in
+the world, and our future—that has provided the ambition to do so.
+2. Ethics of Creating Seemingly Sentient Entities:
+We have been focusing thus far on the ethics of our relationships with artificial
+entities. We turn now to the process creating these entities, and in particular, of
+designing them to seem conscious and aware when they are not. Here, the ethical
+questions center on deception. There is an extensive, and contentious, body of work
+16
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+about the ethics of deception. The central questions are: What exactly constitutes a
+deception? Are all deceptions ethically wrong—and if not, which ones are permitted
+and why? For the purpose of this discussion, I will put forth some basic definitions
+and ethical premises, so we can focus on the new issues artificial entities raise. An
+act or quality is deceptive if it is intended to cause the recipient to believe something
+that is not true. Intent is key: not every false statement or causing of false belief is
+deceptive. If one believes something that is not true, and tells that untrue thing to
+others, that is a mistake, not a deception. If one says something true, but the recipient
+misconstrues or misinterprets it that is a misunderstanding, not a deception. Ethical
+concerns focus on intentional deceptions. While a mantis that evolved to resemble a
+dead leaf is deceptive and this deception harms its predators, it is not unethical, for
+the mantis did not choose to deceive. Humans lie deliberately--and so do some
+animals; it is a sign of advanced cognition.
+Most people (and philosophers) hold more nuanced, if differing, views,
+evaluating the ethics of deceptions by the harm they cause. An altruistic deception is
+done at one‟s own expense to benefit the other; a selfish deception is done for one‟s
+own gain and harming the recipient is an effect but not the goal; a malicious
+deception is performed with the goal of harming the recipient. In an ethical calculus
+of deception, one might argue that altruistic deceptions are ethical, and ones that
+cause harm should be assessed based on the amount of harm caused and the moral
+standing of the various parties. A lie to a would-be mass shooter that results in his
+capture and saves many lives is by narrow definition a malicious lie, but most people
+would agree that it was ethical.
+An active and growing field of research seeks to understand how to design
+technologies that influence people and compel them to conform and obey. Robots
+that “use human-like gazing behaviour” are known to be persuasive—and become
+even more so if gestures are added. If a robot does something that induces gratitude,
+“the norm of reciprocity compels people to return a favour. People conform when
+faced with “active peer pressure” from a group of robots, and “robots have enough
+authority to pressure participants, even if they protest, to continue a tedious task for a
+substantial amount of time.” The published research cites laudable goals as potential
+applications; the technology will help the user stick to a diet, follow crucial
+directions, or use environmentally responsible products. Yet there is nothing that
+ensures that these powerful techniques will always be used so benevolently.
+3. Sentient Entities as Social Mirror:
+
+17
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+The big-eyed, round-bodied artificial assistant that sits on our counter, playing
+music and telling jokes, seems disarmingly innocuous; if we think of it as having
+intentions, they are to please us. But when we imagine an actually sentient, conscious
+artificial being and its goals and intentions, the narrative tends to darken. To
+understand why, we need to turn to another mental quality—intelligence. Vernacular
+Western thought pictures the world as hierarchical, with humans on top due to our
+superior intelligence. This intelligence has given us fantastic power: we build
+bridges, cities, bombs, and transistors; we conquer nature with vaccines, dams, and
+insecticides. Our intelligence has given us power over all the other animals, which
+we have exploited without hesitation. But while our intelligence gives us the ability
+to do these things, it is our consciousness—our awareness of ourselves, our place in
+the world, and our future—that has provided the ambition to do so.
+So long as the machine is merely intelligent, cleverly solving very difficult
+problems— problems far too complex for a mere human intelligence to solve—it
+does not pose an existential threat to us. It solves the problems simply because that‟s
+what it automatically, mindlessly does, much like a bacterium reverses course away
+from an obstacle. But if that machine somehow becomes sentient, with preferences
+and the drive to achieve them—or conscious, with a sense of self and of the future,
+the ingredients for ambition—then it is deeply threatening to us.
+Samuel Butler voiced this fear in his 1872 novel Erewhon: “The machines were
+ultimately destined to supplant the race of man, and to become instinct with a vitality
+as different from, and superior to, that of animals, as animal to vegetable life.” To
+prevent this destiny, the people of Erewhon destroyed all machines and banned their
+manufacture56. Karel Capek introduced the word “robot” in R.U.R, his 1920 play in
+which the robots, provoked by long mistreatment, rise in rebellion and ultimately
+annihilates the human race. In the 1967 short story “I Have No Mouth, and I Must
+Scream,” Harlan Ellison describes a world in which humanity has been made nearly
+extinct by intelligent machines that had been programmed to wage war; the few
+humans that remain are tormented by the sadistic and now conscious AIs. Today, the
+fear that the machines we make will supplant us echoes in warnings not only from
+science fiction writers and technology critics, but from scientists and engineers them.
+Physicist Stephen Hawking warned that “The development of full artificial
+intelligence could spell the end of the human race”. Along similar lines, inventor
+Elon Musk has said “If AI has a goal and humanity just happens to be in the way, it
+will destroy humanity as a matter of course without even thinking about it.” It is not
+certain that a machine can ever become sentient or conscious; even if it could, it is far
+from known by what process or—dystopian terrors aside—what sort of being it will
+18
+
+21AD1907
+
+ETHICS AND AI
+
+UNIT-I
+
+be. All the conscious beings we know are living creatures, who evolved over millions
+of years through a process that favoured reproductive survival. A machine
+consciousness would be vastly different, in ways we cannot predict.
+
+19
+
+

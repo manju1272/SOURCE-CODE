@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Processing System</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Video Background */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.5);
+            color: #E0E0E0; /* Soft white text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: center;  /* Centers content horizontally */
+            align-items: center;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        header h2 {
+            color: cyan;
+            font-weight: bold;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        header a {
+            text-decoration: none;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: black;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        header a:hover {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            box-shadow: 0 5px 15px rgba(255, 0, 100, 0.4);
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-rows: minmax(100px, auto);
+            grid-template-columns: 1fr; /* Ensures a single column layout */
+            gap: 15px;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+            flex: 1;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+            max-width: 800px; /* Limits the width */
+            margin: auto; /* Centers the box */
+        }
+
+        .grid-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .grid-item h1 {
+            font-size: 28px;
+            color: cyan;
+            font-weight: bold;
+        }
+
+        .grid-item h2 {
+            font-size: 22px;
+            color: #ff007b;
+        }
+
+        .grid-item p {
+            font-size: 18px;
+            color: #f1f1f1;
+        }
+
+        /* Features List */
+        .grid-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .grid-item ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: lightblue;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .grid-item ul li strong {
+            color: #00eaff; /* Cyan for highlighting key feature */
+            font-size: 20px;
+        }
+
+        .grid-item ul li span {
+            flex-grow: 1;
+            color: #f1f1f1;
+            font-size: 18px;
+        }
+
+        /* Quotes Section */
+        .grid-item.quotes h2 {
+            color: cyan;
+        }
+
+        .grid-item.quotes p {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(255, 0, 111);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: lightblue;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff416c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='homev.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <a href="/register">Login</a>
+        <h2>AI-Powered Text Processing System</h2>
+    </header>
+
+    <div class="grid-container">
+        <!-- Introduction -->
+        <div class="grid-item">
+            <h1>Revolutionize Text Processing with AI</h1>
+            <h2>Smarter, Faster, and More Efficient.</h2>
+            <p>Using advanced NLP models like <strong>BERT</strong> and <strong>T5</strong>, transform your text with AI-powered automation.</p>
+        </div>
+
+        <!-- Brief Introduction -->
+        <div class="grid-item">
+            <p>
+                Our AI-powered text processing system leverages advanced NLP models like BERT and T5 to automate and enhance text-based tasks. From generating question papers and summarizing content to analyzing text similarities and suggesting synonyms, our tools are designed to save time, improve accuracy, and boost productivity for educators, researchers, and professionals.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <!--
+        <div class="grid-item">
+            <h2>Key Features</h2>
+            <ul>
+                <li>📝 <strong>Automated Question Paper Generation:</strong> Create quizzes and fill-in-the-blank exercises in seconds.</li>
+                <li>📄 <strong>Text Summarization:</strong> Condense lengthy documents into concise, meaningful summaries.</li>
+                <li>🔍 <strong>Text Similarity Analysis:</strong> Compare two texts and identify similarities and differences.</li>
+                <li>📚 <strong>Synonym Suggestions:</strong> Enhance your vocabulary with context-aware synonym recommendations.</li>
+            </ul>
+        </div>
+        -->
+
+        <!-- Quote -->
+        <div class="grid-item quotes">
+            <h2>Inspirational Quote</h2>
+            <p>"Empowering minds through intelligent text processing."</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="/about">About Us</a>
+        <a href="/features">Features</a>
+        <a href="/faqs">FAQs</a>
+    </footer>
+
+    <script>
+        document.querySelector('a[href="#register-form"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#register-form').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+<script>
+    // Select menu icon and navigation links
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    // Add click event listener to the menu icon
+    menuIcon.addEventListener('click', (event) => {
+        // Prevent menu close if clicking inside the menu icon
+        event.stopPropagation();
+        // Toggle visibility of navigation links
+        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Optional: Hide menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target)) {
+            navLinks.style.display = 'none';
+        }
+    });
+</script>
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    const nameInput = document.querySelector('input[name="name"]');
+    const emailInput = document.querySelector('input[name="email"]');
+    
+    // Name validation (only alphabets and spaces)
+    if (!/^[A-Za-z\s]+$/.test(nameInput.value)) {
+        alert("Name can only contain letters and spaces.");
+        event.preventDefault(); // Prevent form submission
+    }
+
+    // Additional email validation (if needed)
+    const emailPattern = /^[a-zA-Z0-9]+[a-zA-Z0-9._%+-]*@gmail\.com$/;
+    if (!emailPattern.test(emailInput.value)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault(); // Prevent form submission
+    }
+});
+</script>
+<script>
+    // Display a window alert if the server sends an alert message
+    window.onload = function () {
+        const alertMessage = "{{ alert_message | safe }}";
+        if (alertMessage) {
+            alert(alertMessage);
+        }
+    };
+</script>
+
+</body>
+</html>
+
+

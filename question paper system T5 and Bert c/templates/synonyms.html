@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNONYM SUGGESTION</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+    <style>
+        /* Cyberpunk-Themed Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #E0E0E0; /* Light text */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Video Background */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgb(0, 0, 0); /* Dark transparent background */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3); /* Neon cyan glow */
+            text-align: center;
+        }
+
+        
+     
+
+        h2 {
+            color: #00FFFF; /* Neon Cyan */
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-shadow: 0px 0px 10px #00FFFF;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #00FFFF;
+            border-radius: 8px;
+            font-size: 16px;
+            background: transparent;
+            color: #E0E0E0;
+            box-sizing: border-box;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #FF007F;
+            box-shadow: 0px 0px 10px #FF007F;
+            outline: none;
+        }
+
+        button {
+            background-color: #00FFFF;
+            color: #121212;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0088FF;
+            box-shadow: 0px 0px 15px #0088FF;
+        }
+
+        #suggestions {
+            margin-top: 20px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 255, 255, 0.2);
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #00FFFF;
+        }
+
+        h3, h4 {
+            color: #00FFFF;
+            margin-bottom: 10px;
+        }
+
+        li {
+            list-style-type: none;
+            padding: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: #E0E0E0;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #FF007F;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #FF3399;
+            box-shadow: 0px 0px 10px #FF3399;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video id="video-background" autoplay loop muted>
+        <source src="{{ url_for('static', filename='synv.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="/dashboard" class="back-button">⬅ Back</a>
+
+    
+    
+    <div class="container">
+        <h2>Synonym</h2>
+        <input type="text" id="wordInput" placeholder="Enter a word">
+        <button onclick="getSynonyms()">Generate Synonym</button>
+        <div id="suggestions"></div>
+    </div>
+    
+    <script>
+        // Load default synonyms on page load
+        window.onload = function() {
+            fetch("/default_synonyms")
+                .then(response => response.json())
+                .then(data => {
+                    let output = "<h3>Default Synonyms:</h3>";
+                    for (const [word, synonyms] of Object.entries(data)) {
+                        output += `<h4>${word}:</h4><ul>`;
+                        synonyms.forEach(syn => {
+                            output += `<li>${syn}</li>`;
+                        });
+                        output += "</ul>";
+                    }
+                    document.getElementById("suggestions").innerHTML = output;
+                })
+                .catch(error => console.error("Error:", error));
+        };
+    
+        // Function to get synonyms for input word
+        function getSynonyms() {
+            let word = document.getElementById("wordInput").value;
+            fetch("/get_synonyms", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ word: word })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.synonyms.length > 0) {
+                    let output = `<h3>Synonyms for '${word}':</h3><ul>`;
+                    data.synonyms.forEach(syn => {
+                        output += `<li>${syn}</li>`;
+                    });
+                    output += "</ul>";
+                    document.getElementById("suggestions").innerHTML = output;
+                } else {
+                    document.getElementById("suggestions").innerHTML = "<p>No synonyms found.</p>";
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+    
+</body>
+</html>
+

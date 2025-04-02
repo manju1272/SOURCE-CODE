@@ -1,0 +1,244 @@
+**# Object-Oriented Programming (OOP) Comprehensive Notes**
+
+## **1. Introduction to Object-Oriented Programming (OOP)**
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can contain data and code to manipulate the data. OOP is widely used in modern programming languages like Java, C++, and Python. It helps in designing scalable, modular, and maintainable software systems.
+
+### **Advantages of OOP:**
+- **Modularity:** Code is divided into smaller, reusable parts.
+- **Encapsulation:** Data hiding ensures security and integrity.
+- **Code Reusability:** Through inheritance, existing code can be extended.
+- **Scalability:** Large projects can be efficiently managed.
+- **Maintainability:** Code is easier to debug and maintain.
+
+---
+
+## **2. Core Concepts of OOP**
+### **2.1 Encapsulation**
+Encapsulation is the concept of binding data (variables) and methods (functions) together in a single unit called a class. It restricts direct access to certain details of an object and only allows controlled access.
+
+#### **Example in Java:**
+```java
+class Employee {
+    private String name;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+```
+
+#### **Example in Python:**
+```python
+class Employee:
+    def __init__(self):
+        self.__name = ""
+    
+    def set_name(self, name):
+        self.__name = name
+    
+    def get_name(self):
+        return self.__name
+```
+
+#### **Key Benefits of Encapsulation:**
+- Protects data from unintended modifications.
+- Enhances security and modularity.
+
+---
+
+### **2.2 Inheritance**
+Inheritance is the process by which a new class (child) derives properties and behavior from an existing class (parent). It promotes code reuse and hierarchical classification.
+
+#### **Types of Inheritance:**
+1. **Single Inheritance:** A child inherits from a single parent.
+2. **Multiple Inheritance:** A child inherits from multiple parents.
+3. **Multilevel Inheritance:** A class inherits from another derived class.
+4. **Hierarchical Inheritance:** Multiple classes inherit from a single base class.
+5. **Hybrid Inheritance:** A combination of multiple inheritance types.
+
+#### **Example in C++ (Single Inheritance):**
+```cpp
+class Parent {
+public:
+    void display() {
+        cout << "This is the parent class.";
+    }
+};
+
+class Child : public Parent {
+};
+
+int main() {
+    Child obj;
+    obj.display();
+    return 0;
+}
+```
+
+#### **Example in Python (Multilevel Inheritance):**
+```python
+class A:
+    def showA(self):
+        print("Class A")
+
+class B(A):
+    def showB(self):
+        print("Class B")
+
+class C(B):
+    def showC(self):
+        print("Class C")
+
+obj = C()
+obj.showA()
+obj.showB()
+obj.showC()
+```
+
+---
+
+### **2.3 Polymorphism**
+Polymorphism allows methods to have different implementations based on the object that is calling them.
+
+#### **Types of Polymorphism:**
+1. **Compile-time Polymorphism (Method Overloading)**
+2. **Run-time Polymorphism (Method Overriding)**
+
+#### **Example of Method Overloading (Java):**
+```java
+class MathOperations {
+    int add(int a, int b) {
+        return a + b;
+    }
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+```
+
+#### **Example of Method Overriding (Python):**
+```python
+class Parent:
+    def show(self):
+        print("Parent class")
+
+class Child(Parent):
+    def show(self):
+        print("Child class")
+
+obj = Child()
+obj.show()
+```
+
+---
+
+### **2.4 Abstraction**
+Abstraction is the concept of hiding implementation details and only showing the necessary functionality.
+
+#### **Example of Abstraction in Java (Abstract Class):**
+```java
+abstract class Animal {
+    abstract void makeSound();
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+```
+
+---
+
+## **3. OOP in Different Languages**
+### **3.1 Java**
+- Uses class-based object orientation.
+- Supports abstraction using interfaces and abstract classes.
+- Strong type checking and garbage collection.
+
+### **3.2 C++**
+- Supports multiple inheritance and operator overloading.
+- Provides both procedural and object-oriented capabilities.
+- More control over memory management.
+
+### **3.3 Python**
+- Allows dynamic typing and duck typing.
+- Supports multiple inheritance.
+- Simpler syntax compared to Java and C++.
+
+---
+
+## **4. Design Patterns in OOP**
+### **4.1 Singleton Pattern**
+Ensures only one instance of a class exists in the system.
+
+#### **Example in Java:**
+```java
+class Singleton {
+    private static Singleton instance;
+    private Singleton() {}
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+```
+
+---
+
+### **4.2 Factory Pattern**
+Provides an interface for creating objects without specifying their concrete classes.
+
+#### **Example in Python:**
+```python
+class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Bark"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+
+def get_animal(type):
+    if type == "dog":
+        return Dog()
+    elif type == "cat":
+        return Cat()
+```
+
+---
+
+### **4.3 Observer Pattern**
+Defines a one-to-many dependency where multiple objects listen to and react to state changes in another object.
+
+#### **Example in Java:**
+```java
+import java.util.*;
+class ObserverExample {
+    public static void main(String args[]) {
+        Observable observable = new Observable();
+        Observer observer = (o, arg) -> System.out.println("State changed!");
+        observable.addObserver(observer);
+        observable.notifyObservers();
+    }
+}
+```
+
+---
+
+## **5. Conclusion**
+Object-Oriented Programming is a powerful paradigm that helps in developing robust, scalable, and maintainable software. Understanding OOP concepts and design patterns is essential for software developers in modern programming languages like Java, C++, and Python.
+
+---
+

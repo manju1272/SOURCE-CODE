@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION GENERATOR</title>
+    <link rel="icon" href="{{ url_for('static', filename='papers.png') }}" type="image/x-icon">
+
+    <style>
+        /* Import Futuristic Font */
+        /*@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*font-family: 'Orbitron', sans-serif;*/
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #181A2A; /* Dark Metallic Blue */
+            color: #E0E0E0; /* Soft Gray */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Video Background */
+        #video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            background: rgba(10, 10, 30, 0.9); /* Dark background */
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 102, 204, 0.8); /* Neon Glow */
+            text-align: center;
+            border: 2px solid #00ccff; /* Neon Blue Border */
+        }
+
+        /* Heading */
+        h2 {
+            color: #ff66cc; /* Neon Pink */
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 12px rgba(255, 102, 204, 0.8); /* Soft Glow */
+            margin-bottom: 20px;    
+        }
+
+        /* File Input */
+        input[type="file"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #00ccff; /* Neon Blue */
+            background: rgba(20, 20, 50, 0.8); /* Dark Input Background */
+            color: #fff; /* White Text */
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .button {
+            background: linear-gradient(45deg, #00ccff, #ff66cc); /* Neon Blue to Pink */
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.8);
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #0000CD, #8B008B); /* Reverse Dark Blue to Dark Pink */
+            box-shadow: 0 0 25px rgba(139, 0, 139, 1);
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #ff00b7, #ff009d); /* Darker Pink Gradient */
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 12px rgba(255, 0, 183, 0.8);
+        }
+
+        .back-button:hover {
+            background: linear-gradient(45deg, #ff009d, #ff00b7);
+            box-shadow: 0 0 20px rgba(255, 0, 183, 1);
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay loop muted id="video-bg">
+        <source src="{{ url_for('static', filename='quesv.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <a href="/dashboard" class="back-button">⬅ Back</a>
+
+
+    <div class="container">
+        <h2>Upload Text File for Question Generation</h2>
+        <form action="/generate_questions" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".txt" required>
+            <select name="action" required>
+                <option value="download">📥 Download Only</option>
+                <option value="email">📧 Email Only</option>
+                <option value="both">📥 & 📧 Both</option>
+            </select>
+            <input type="email" name="email" placeholder="Enter your email (optional)">
+            <button type="submit" class="button">Proceed</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
